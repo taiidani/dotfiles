@@ -27,8 +27,4 @@ In order to prepare a fresh install to use my dotfiles, I must:
    ```sh
    ./bin/chezmoi apply
    ```
-1. Open a new terminal window.
-1. Bootstrap the system.
-   ```sh
-   .dotfiles/install.sh
-   ```
+1. Follow the instructions provided by the chezmoi scripts.
