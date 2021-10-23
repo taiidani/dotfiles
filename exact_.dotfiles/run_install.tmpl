@@ -1,0 +1,99 @@
+#! /bin/bash
+
+set -e
+
+TEMP_DIRECTORY=$(mktemp -d)
+trap "rm -Rf $TEMP_DIRECTORY" EXIT
+
+# Install ZSH
+if ! which zsh &> /dev/null; then
+    echo "❌ ZSH not installed. Installing..."
+    sudo apt-get install zsh
+
+    # https://ohmyz.sh/#install
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "YOU NEED TO LOG OUT TO CHANGE YOUR DEFAULT SHELL!"
+    echo "Run this again after logging in."
+    exit
+elif [[ "$SHELL" != "/usr/bin/zsh" ]]; then
+    echo "❌ Your current shell is not ZSH. Please ensure that you are in a zsh shell before continuing."
+    exit
+else
+    echo "✅ ZSH installed"
+fi
+
+# Install Golang
+if ! which go &> /dev/null; then
+    echo "❌ Go not installed. Installing..."
+
+    # Inspired by https://github.com/canha/golang-tools-install-script
+    VERSION="1.17"
+    PLATFORM="{{ .chezmoi.os }}-{{ .chezmoi.arch }}"
+    PACKAGE_NAME="go$VERSION.$PLATFORM.tar.gz"
+
+    export GOROOT=${HOME}/bin/golang
+    export GOPATH=${HOME}/go
+    export PATH=${PATH}:${GOROOT}/bin:${GOPATH}/bin
+
+    mkdir -p ${GOROOT}
+    curl -o "$TEMP_DIRECTORY/go.tar.gz" https://storage.googleapis.com/golang/$PACKAGE_NAME
+    tar -C "$GOROOT" --strip-components=1 -xzf "$TEMP_DIRECTORY/go.tar.gz"
+    echo "✅ Go installed"
+else
+    echo "✅ Go installed"
+fi
+
+# Install Hashicorp Tooling
+if ! which nomad &> /dev/null; then
+    echo "❌ Hashicorp tooling not installed. Installing..."
+    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+    sudo apt-add-repository "deb [arch={{ .chezmoi.arch }}] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+    sudo apt-get update && sudo apt-get install nomad terraform vault consul packer
+
+    echo "✅ Hashicorp tooling installed"
+else
+    echo "✅ Hashicorp tooling installed"
+fi
+
+# Install CNI Plugins
+# Required for Nomad to use Consul Connect
+if [[ ! -d /opt/cni/bin ]]; then
+    echo "❌ CNI Plugins not installed. Installing..."
+
+    curl -L -o ${TEMP_DIRECTORY}/cni-plugins.tgz "https://github.com/containernetworking/plugins/releases/download/v1.0.0/cni-plugins-linux-{{ .chezmoi.arch }}"-v1.0.0.tgz
+    sudo mkdir -p /opt/cni/bin
+    sudo tar -C /opt/cni/bin -xzf ${TEMP_DIRECTORY}/cni-plugins.tgz
+    echo "✅ CNI Plugins installed"
+else
+    echo "✅ CNI Plugins installed"
+fi
+
+# Install Docker
+if ! which docker &> /dev/null; then
+    echo "❌ Docker not installed. Installing..."
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo apt-add-repository "deb [arch={{ .chezmoi.arch }}] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io
+    sudo usermod -aG docker $USER
+
+    echo "✅ Docker installed. You will need to log out and log back in before you can run 'docker' without sudo"
+else
+    echo "✅ Docker installed"
+fi
+
+# Install PGP Key
+if [[ -z "$(gpg --list-keys | grep r.taiidani)" ]]; then
+    echo "❌ PGP Key not installed. Installing..."
+    if [[ -f $HOME/.dotfiles/pgp ]]; then
+        cat $HOME/.dotfiles/pgp | base64 --decode > $TEMP_DIRECTORY/private.key
+        gpg --import $TEMP_DIRECTORY/private.key
+        gpg --edit-key 0AD07328AEA2A040 trust quit
+        echo "✅ PGP Key installed"
+    else
+        echo "PGP key not distributed from Vault yet. Please run this script again"
+    fi
+else
+    echo "✅ PGP Key installed"
+fi
+
+echo "✅ Installs complete. Open a new terminal window to refresh your shell variables"
