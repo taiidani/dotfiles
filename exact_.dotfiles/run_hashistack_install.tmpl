@@ -1,0 +1,44 @@
+#! /bin/bash
+
+set -e
+
+TEMP_DIRECTORY=$(mktemp -d)
+trap "rm -Rf $TEMP_DIRECTORY" EXIT
+
+# Install Hashicorp Tooling
+if ! which nomad &> /dev/null; then
+    echo "❌ Hashicorp tooling not installed. Installing..."
+    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+    sudo apt-add-repository "deb [arch={{ .chezmoi.arch }}] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+    sudo apt-get update && sudo apt-get install nomad terraform vault consul packer
+
+    echo "✅ Hashicorp tooling installed"
+else
+    echo "✅ Hashicorp tooling installed"
+fi
+
+# Install CNI Plugins
+# Required for Nomad to use Consul Connect
+if [[ ! -d /opt/cni/bin ]]; then
+    echo "❌ CNI Plugins not installed. Installing..."
+
+    curl -L -o ${TEMP_DIRECTORY}/cni-plugins.tgz "https://github.com/containernetworking/plugins/releases/download/v1.0.0/cni-plugins-linux-{{ .chezmoi.arch }}"-v1.0.0.tgz
+    sudo mkdir -p /opt/cni/bin
+    sudo tar -C /opt/cni/bin -xzf ${TEMP_DIRECTORY}/cni-plugins.tgz
+    echo "✅ CNI Plugins installed"
+else
+    echo "✅ CNI Plugins installed"
+fi
+
+# Install Tool Configurations
+if [[ -d /etc/nomad.d ]] && [[ -f $HOME/.dotfiles/nomad.hcl ]]; then
+    echo "Symlinking nomad configuration..."
+    sudo ln -sf ${HOME}/.dotfiles/nomad.hcl /etc/nomad.d/nomad.hcl
+fi
+if [[ -d /etc/consul.d ]] && [[ -f $HOME/.dotfiles/consul.hcl ]]; then
+    echo "Installing consul configuration..."
+    sudo rm /etc/consul.d/consul.hcl
+    sudo cp -f ${HOME}/.dotfiles/consul.hcl /etc/consul.d/consul.hcl
+    sudo chown consul:consul ${HOME}/.dotfiles/consul.hcl
+    echo "✅ Consul configuration installed. You will need to manually join this server to the existing cluster"
+fi
