@@ -6,6 +6,7 @@ TEMP_DIRECTORY=$(mktemp -d)
 trap "rm -Rf $TEMP_DIRECTORY" EXIT
 
 # Install ZSH
+{{- if ne .chezmoi.os "darwin" }}
 if ! which zsh &> /dev/null; then
     echo "❌ ZSH not installed. Installing..."
     sudo apt-get install zsh
@@ -21,11 +22,15 @@ elif [[ "$SHELL" != "/usr/bin/zsh" ]]; then
 else
     echo "✅ ZSH installed"
 fi
+{{- end }}
 
 # Install Golang
 if ! which go &> /dev/null; then
     echo "❌ Go not installed. Installing..."
 
+    {{- if eq .chezmoi.os "darwin" }}
+    brew install go
+    {{- else }}
     # Inspired by https://github.com/canha/golang-tools-install-script
     VERSION="1.17"
     PLATFORM="{{ .chezmoi.os }}-{{ .chezmoi.arch }}"
@@ -38,6 +43,7 @@ if ! which go &> /dev/null; then
     mkdir -p ${GOROOT}
     curl -o "$TEMP_DIRECTORY/go.tar.gz" https://storage.googleapis.com/golang/$PACKAGE_NAME
     tar -C "$GOROOT" --strip-components=1 -xzf "$TEMP_DIRECTORY/go.tar.gz"
+    {{- end }}
     echo "✅ Go installed"
 else
     echo "✅ Go installed"
@@ -46,12 +52,17 @@ fi
 # Install Docker
 if ! which docker &> /dev/null; then
     echo "❌ Docker not installed. Installing..."
+
+    {{- if eq .chezmoi.os "darwin" }}
+    brew cask install docker
+    echo "✅ Docker installed"
+    {{- else }}
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     sudo apt-add-repository "deb [arch={{ .chezmoi.arch }}] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
     sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io
     sudo usermod -aG docker $USER
-
     echo "✅ Docker installed. You will need to log out and log back in before you can run 'docker' without sudo"
+    {{- end }}
 else
     echo "✅ Docker installed"
 fi

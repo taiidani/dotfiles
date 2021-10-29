@@ -1,0 +1,20 @@
+[user]
+	name = Ryan Nixon
+	email = {{ .email }}
+	signingkey = 0AD07328AEA2A040
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[commit]
+  gpgsign = true
+[pull]
+	rebase = false
+{{- if eq .chezmoi.os "darwin" }}
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg
+[core]
+	editor = code --wait
+{{- end }}

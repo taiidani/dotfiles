@@ -2,7 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+{{- if eq .chezmoi.os "darwin" }}
+export ZSH="/Users/rnixon/.oh-my-zsh"
+{{- else }}
 export ZSH="/home/rnixon/.oh-my-zsh"
+{{- end }}
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,15 +106,28 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Custom adds
+{{- if ne .chezmoi.os "darwin" }}
 export PATH=${PATH}:${HOME}/bin
+{{- end }}
+export EDITOR='nano'
+export GPG_TTY=`tty`
 export VAULT_ADDR=https://vault-cluster.vault.52365203-003f-492b-bd1a-546d7f153d24.aws.hashicorp.cloud:8200
+{{- if eq .chezmoi.os "darwin" }}
+export NOMAD_ADDR=http://192.168.102.2:4646
+export CONSUL_HTTP_ADDR=192.168.102.2:8500
+{{- end }}
 export VAULT_NAMESPACE=admin
 
 # GoLang
-export GOROOT=${HOME}/bin/golang
 export GOPATH=${HOME}/go
+{{- if ne .chezmoi.os "darwin" }}
+export GOROOT=${HOME}/bin/golang
 export PATH=${PATH}:${GOROOT}/bin:${GOPATH}/bin
+{{- else }}
+export PATH=${PATH}:${GOPATH}/bin
+{{- end }}
 
 # All the tokens
 export GITHUB_TOKEN="{{ (vault "credentials/dotfiles").data.data.GITHUB_TOKEN }}"
 export NOMAD_TOKEN="{{ (vault "credentials/dotfiles").data.data.NOMAD_TOKEN }}"
+export CONSUL_HTTP_TOKEN="{{ (vault "credentials/dotfiles").data.data.CONSUL_HTTP_TOKEN }}"
