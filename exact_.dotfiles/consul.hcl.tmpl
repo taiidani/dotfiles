@@ -5,7 +5,7 @@
 # it defaults to "dc1". Consul has first-class support for multiple datacenters, but
 # it relies on proper configuration. Nodes in the same datacenter should be on a
 # single LAN.
-datacenter = "rnd"
+datacenter = "dc1"
 
 # data_dir
 # This flag provides a data directory for the agent to store state. This is required
@@ -39,8 +39,8 @@ ui_config{
 # ensure availability in the case of node failure. Server nodes also participate in a
 # WAN gossip pool with server nodes in other datacenters. Servers act as gateways to
 # other datacenters and forward traffic as appropriate.
-server = false
-# bind_addr = "0.0.0.0"
+server = true
+#bind_addr = "0.0.0.0"
 advertise_addr = "{{ .ip }}" # Get this IP address from ~/.config/chezmoi/chezmoi.toml
 
 # bootstrap_expect
@@ -50,7 +50,7 @@ advertise_addr = "{{ .ip }}" # Get this IP address from ~/.config/chezmoi/chezmo
 # bootstraps the cluster. This allows an initial leader to be elected automatically.
 # This cannot be used in conjunction with the legacy -bootstrap flag. This flag requires
 # -server mode.
-# bootstrap_expect=2
+bootstrap_expect=2
 
 # encrypt
 # Specifies the secret key to use for encryption of Consul network traffic. This key must
@@ -73,24 +73,26 @@ encrypt = "{{ (vault "credentials/hcp-consul").data.data.encrypt }}"
 # template. If Consul is running on the non-default Serf LAN port, this must be specified
 # as well. IPv6 must use the "bracketed" syntax. If multiple values are given, they are
 # tried and retried in the order listed until the first succeeds. Here are some examples:
-retry_join = ["{{ (vault "credentials/hcp-consul").data.data.host }}"]
-
-ca_file = "/etc/consul.d/ca.pem"
-auto_encrypt {
-    tls = true
-}
-
-verify_outgoing = true
-encrypt_verify_incoming = true
-encrypt_verify_outgoing = true
-log_level = "INFO"
+#retry_join = ["consul.domain.internal"]
+#retry_join = ["10.0.4.67"]
+#retry_join = ["[::1]:8301"]
+#retry_join = ["consul.domain.internal", "10.0.4.67"]
+# Cloud Auto-join examples:
+# More details - https://www.consul.io/docs/agent/cloud-auto-join
+#retry_join = ["provider=aws tag_key=... tag_value=..."]
+#retry_join = ["provider=azure tag_name=... tag_value=... tenant_id=... client_id=... subscription_id=... secret_access_key=..."]
+#retry_join = ["provider=gce project_name=... tag_value=..."]
 
 connect {
     enabled = true
 }
 
+ports {
+    grpc = 8502
+}
+
 acl = {
     enabled = true
-    default_policy = "deny"
-    down_policy = "async-cache"
+    default_policy = "allow"
+    enable_token_persistence = true
 }
