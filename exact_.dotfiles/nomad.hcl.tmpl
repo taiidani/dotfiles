@@ -26,7 +26,7 @@ vault {
 }
 
 consul {
-  token = "{{ (vault "credentials/dotfiles").data.data.NOMAD_SERVER_CONSUL_TOKEN }}"
+  token = "{{ (vault "credentials/hcp-consul").data.data.token }}"
 }
 
 plugin "docker" {

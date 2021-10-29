@@ -1,0 +1,23 @@
+{
+    "acl": {
+        "enabled": true,
+        "down_policy": "async-cache",
+        "default_policy": "deny"
+    },
+    "ca_file": "./ca.pem",
+    "client_addr": "0.0.0.0",
+    "verify_outgoing": true,
+    "datacenter": "rnd",
+    "encrypt": "{{ (vault "credentials/hcp-consul").data.data.encrypt }}",
+    "encrypt_verify_incoming": true,
+    "encrypt_verify_outgoing": true,
+    "server": false,
+    "log_level": "INFO",
+    "ui": true,
+    "retry_join": [
+        "{{ (vault "credentials/hcp-consul").data.data.host }}"
+    ],
+    "auto_encrypt": {
+        "tls": true
+    }
+}

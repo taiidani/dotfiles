@@ -114,7 +114,7 @@ export GPG_TTY=`tty`
 export VAULT_ADDR=https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200
 {{- if eq .chezmoi.os "darwin" }}
 export NOMAD_ADDR=http://192.168.102.2:4646
-export CONSUL_HTTP_ADDR=192.168.102.2:8500
+export CONSUL_HTTP_ADDR="{{ (vault "credentials/hcp-consul").data.data.addr }}"
 {{- end }}
 export VAULT_NAMESPACE=admin
 
@@ -130,4 +130,4 @@ export PATH=${PATH}:${GOPATH}/bin
 # All the tokens
 export GITHUB_TOKEN="{{ (vault "credentials/dotfiles").data.data.GITHUB_TOKEN }}"
 export NOMAD_TOKEN="{{ (vault "credentials/dotfiles").data.data.NOMAD_TOKEN }}"
-export CONSUL_HTTP_TOKEN="{{ (vault "credentials/dotfiles").data.data.CONSUL_HTTP_TOKEN }}"
+export CONSUL_HTTP_TOKEN="{{ (vault "credentials/hcp-consul").data.data.token }}"
