@@ -42,15 +42,15 @@ if [[ -d /etc/nomad.d ]] && [[ -f $HOME/.dotfiles/nomad.hcl ]]; then
 fi
 if [[ -d /etc/consul.d ]] && [[ -f $HOME/.dotfiles/consul.json ]]; then
     echo "Installing consul configuration..."
-    sudo rm /etc/consul.d/client_config.json
+    sudo rm -f /etc/consul.d/client_config.json
     sudo cp -f ${HOME}/.dotfiles/consul.json /etc/consul.d/client_config.json
     sudo chown consul:consul /etc/consul.d/client_config.json
 
-    sudo rm /etc/consul.d/client_acl.json
+    sudo rm -f /etc/consul.d/client_acl.json
     sudo cp -f ${HOME}/.dotfiles/consul_acl.json /etc/consul.d/client_acl.json
     sudo chown consul:consul /etc/consul.d/client_acl.json
 
-    sudo rm /etc/consul.d/consul_ca.pem
+    sudo rm -f /etc/consul.d/consul_ca.pem
     sudo cp -f ${HOME}/.dotfiles/consul_ca.pem /etc/consul.d/ca.pem
     sudo chown consul:consul /etc/consul.d/ca.pem
     echo "✅ Consul configuration installed. You will need to manually join this server to the existing cluster"
