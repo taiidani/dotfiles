@@ -17,9 +17,9 @@ In order to prepare a fresh install to use my dotfiles, I must:
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    sudo apt-get update && sudo apt-get install vault
    ```
-1. Log into Vault with my [HCP Vault](https://vault-cluster.vault.52365203-003f-492b-bd1a-546d7f153d24.aws.hashicorp.cloud:8200/ui/vault/secrets?namespace=admin) credentials.
+1. Log into Vault with my [HCP Vault](https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200/ui/vault/secrets?namespace=admin) credentials.
    ```sh
-   export VAULT_ADDR=https://vault-cluster.vault.52365203-003f-492b-bd1a-546d7f153d24.aws.hashicorp.cloud:8200
+   export VAULT_ADDR=https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200
    export VAULT_NAMESPACE=admin
    vault login --method=userpass username=rnixon
    ```

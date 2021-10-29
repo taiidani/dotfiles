@@ -19,7 +19,7 @@ client {
 
 vault {
   enabled = true
-  address = "https://vault-cluster.vault.52365203-003f-492b-bd1a-546d7f153d24.aws.hashicorp.cloud:8200"
+  address = "https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200"
   namespace = "admin"
   token = "{{ (vault "credentials/dotfiles").data.data.NOMAD_SERVER_VAULT_TOKEN }}"
   create_from_role = "nomad-cluster"
