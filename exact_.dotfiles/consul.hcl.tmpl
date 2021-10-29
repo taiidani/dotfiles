@@ -75,7 +75,7 @@ encrypt = "{{ (vault "credentials/hcp-consul").data.data.encrypt }}"
 # tried and retried in the order listed until the first succeeds. Here are some examples:
 retry_join = ["{{ (vault "credentials/hcp-consul").data.data.host }}"]
 
-ca_file = "./ca.pem"
+ca_file = "/etc/consul.d/ca.pem"
 auto_encrypt {
     tls = true
 }
