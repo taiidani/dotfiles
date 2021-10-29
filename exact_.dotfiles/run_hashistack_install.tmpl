@@ -45,10 +45,6 @@ if [[ -d /etc/consul.d ]] && [[ -f $HOME/.dotfiles/consul.hcl ]]; then
     sudo rm -f /etc/consul.d/consul.hcl
     sudo cp -f ${HOME}/.dotfiles/consul.hcl /etc/consul.d/consul.hcl
     sudo chown consul:consul /etc/consul.d/consul.hcl
-
-    sudo rm -f /etc/consul.d/client_acl.json
-    sudo cp -f ${HOME}/.dotfiles/consul_acl.json /etc/consul.d/client_acl.json
-    sudo chown consul:consul /etc/consul.d/client_acl.json
     echo "✅ Consul configuration installed."
 fi
 {{- end }}
