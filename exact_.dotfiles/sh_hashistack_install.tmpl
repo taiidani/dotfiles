@@ -13,7 +13,7 @@ if ! which nomad &> /dev/null; then
     {{- else }}
     curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
     sudo apt-add-repository "deb [arch={{ .chezmoi.arch }}] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-    sudo apt-get update && sudo apt-get install nomad terraform vault-enterprise consul-enterprise packer
+    sudo apt-get update && sudo apt-get install nomad terraform vault-enterprise consul packer
     {{- end }}
 
     echo "✅ Hashicorp tooling installed"
