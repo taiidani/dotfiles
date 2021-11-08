@@ -1,0 +1,5 @@
+{{- $ip := promptString "ip" -}}
+{{- $email := promptString "email" -}}
+[data]
+ip = {{ $ip | quote }}
+email = {{ $email | quote }}
