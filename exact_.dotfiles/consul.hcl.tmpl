@@ -74,7 +74,7 @@ encrypt = "{{ (vault "credentials/hcp-consul").data.data.encrypt }}"
 # as well. IPv6 must use the "bracketed" syntax. If multiple values are given, they are
 # tried and retried in the order listed until the first succeeds. Here are some examples:
 #retry_join = ["consul.domain.internal"]
-#retry_join = ["10.0.4.67"]
+retry_join = ["192.168.102.2", "192.168.102.3", "192.168.102.4"]
 #retry_join = ["[::1]:8301"]
 #retry_join = ["consul.domain.internal", "10.0.4.67"]
 # Cloud Auto-join examples:
