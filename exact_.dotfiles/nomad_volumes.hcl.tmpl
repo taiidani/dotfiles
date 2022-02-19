@@ -1,0 +1,38 @@
+client {
+
+{{- if eq .chezmoi.hostname "pop-os" }}
+  host_volume "traefik" {
+    path      = "/opt/traefik/data"
+    read_only = false
+  }
+
+  host_volume "freshrss-data" {
+    path      = "/opt/freshrss/data"
+    read_only = false
+  }
+
+  host_volume "freshrss-extensions" {
+    path      = "/opt/freshrss/extensions"
+    read_only = false
+  }
+
+  host_volume "waypoint-server" {
+    path      = "/opt/waypoint-server/data"
+    read_only = false
+  }
+
+  host_volume "guess" {
+    path      = "/opt/guess/data"
+    read_only = false
+  }
+
+
+{{- else if eq .chezmoi.hostname "taimini" }}
+  host_volume "grafana" {
+    path      = "/opt/grafana/data"
+    read_only = false
+  }
+
+
+{{- end }}
+}
