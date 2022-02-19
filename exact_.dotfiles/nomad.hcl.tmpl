@@ -18,6 +18,10 @@ client {
     retry_max      = 3
     retry_interval = "15s"
   }
+
+  options {
+    "docker.volumes.enabled" = "true"
+  }
 }
 
 vault {
@@ -30,6 +34,12 @@ vault {
 
 consul {
   token = "{{ (vault "credentials/hcp-consul").data.data.token }}"
+}
+
+plugin "docker" {
+  volumes {
+    enabled = true
+  }
 }
 
 plugin "raw_exec" {
