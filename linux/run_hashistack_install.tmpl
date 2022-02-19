@@ -8,20 +8,15 @@ trap "rm -Rf $TEMP_DIRECTORY" EXIT
 # Install Hashicorp Tooling
 if ! which nomad &> /dev/null; then
     echo "❌ Hashicorp tooling not installed. Installing..."
-    {{- if eq .chezmoi.os "darwin" }}
-    brew install nomad terraform vault consul packer
-    {{- else }}
     curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
     sudo apt-add-repository "deb [arch={{ .chezmoi.arch }}] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
     sudo apt-get update && sudo apt-get install nomad terraform vault-enterprise consul packer
-    {{- end }}
 
     echo "✅ Hashicorp tooling installed"
 else
     echo "✅ Hashicorp tooling installed"
 fi
 
-{{- if ne .chezmoi.os "darwin" }}
 # Install CNI Plugins
 # Required for Nomad to use Consul Connect
 if [[ ! -d /opt/cni/bin ]]; then
@@ -38,13 +33,18 @@ fi
 # Install Tool Configurations
 if [[ -d /etc/nomad.d ]] && [[ -f $HOME/.dotfiles/nomad.hcl ]]; then
     echo "Symlinking nomad configuration..."
-    sudo ln -sf ${HOME}/.dotfiles/nomad.hcl /etc/nomad.d/nomad.hcl
+    sudo rm --force /etc/nomad.d/nomad.hcl
+    sudo ln --force ${HOME}/.dotfiles/nomad.hcl /etc/nomad.d/nomad.hcl
+
+    sudo rm --force /etc/nomad.d/nomad_volumes.hcl
+    sudo ln --force ${HOME}/.dotfiles/nomad_volumes.hcl /etc/nomad.d/nomad_volumes.hcl
+
+    echo "✅ Nomad configuration installed."
 fi
 if [[ -d /etc/consul.d ]] && [[ -f $HOME/.dotfiles/consul.hcl ]]; then
     echo "Installing consul configuration..."
-    sudo rm -f /etc/consul.d/consul.hcl
-    sudo cp -f ${HOME}/.dotfiles/consul.hcl /etc/consul.d/consul.hcl
+    sudo rm --force /etc/consul.d/consul.hcl
+    sudo ln --force ${HOME}/.dotfiles/consul.hcl /etc/consul.d/consul.hcl
     sudo chown consul:consul /etc/consul.d/consul.hcl
     echo "✅ Consul configuration installed."
 fi
-{{- end }}

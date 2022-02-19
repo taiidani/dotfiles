@@ -1,0 +1,14 @@
+#! /bin/bash
+
+brew bundle
+
+# Install PGP Key
+if [[ -z "$(gpg --list-keys | grep {{ .email }})" ]]; then
+    echo "❌ PGP Key not installed. Installing..."
+    echo "{{ (vault "credentials/dotfiles").data.data.PRIVATE_PGP_KEY }}" | base64 --decode > $TEMP_DIRECTORY/private.key
+    gpg --import $TEMP_DIRECTORY/private.key
+    gpg --edit-key 0AD07328AEA2A040 trust quit
+    echo "✅ PGP Key installed"
+else
+    echo "✅ PGP Key installed"
+fi
