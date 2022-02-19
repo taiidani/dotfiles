@@ -1,27 +1,30 @@
 # Full configuration options can be found at https://www.nomadproject.io/docs/configuration
 
-data_dir = "/opt/nomad/data"
+data_dir  = "/opt/nomad/data"
 bind_addr = "0.0.0.0"
 
+{{- if .server }}
 server {
-  enabled = true
-  bootstrap_expect = 2
+  enabled          = true
+  bootstrap_expect = 1
 }
+{{- end }}
 
 client {
   enabled = true
-  servers = ["127.0.0.1:4646"]
 
-  options {
-    "docker.volumes.enabled" = "true"
+  server_join {
+    retry_join     = ["192.168.102.2:4646"]
+    retry_max      = 3
+    retry_interval = "15s"
   }
 }
 
 vault {
-  enabled = true
-  address = "https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200"
-  namespace = "admin"
-  token = "{{ (vault "credentials/dotfiles").data.data.NOMAD_SERVER_VAULT_TOKEN }}"
+  enabled          = true
+  address          = "https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200"
+  namespace        = "admin"
+  token            = "{{ (vault "credentials/dotfiles").data.data.NOMAD_SERVER_VAULT_TOKEN }}"
   create_from_role = "nomad-cluster"
 }
 
@@ -29,12 +32,12 @@ consul {
   token = "{{ (vault "credentials/hcp-consul").data.data.token }}"
 }
 
-plugin "docker" {
-  volumes {
+plugin "raw_exec" {
+  config {
     enabled = true
   }
 }
 
 acl {
-  enabled = true
+  enabled = false
 }
