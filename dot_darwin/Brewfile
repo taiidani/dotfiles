@@ -3,6 +3,8 @@ brew 'terraform'
 brew 'vault'
 brew 'consul'
 brew 'packer'
+brew 'watch'
+brew 'espanso'
 
 cask 'docker'
 cask 'slack'
