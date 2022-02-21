@@ -20,7 +20,7 @@ zstyle ':omz:update' mode disabled
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git asdf zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,7 +38,7 @@ export CONSUL_HTTP_ADDR="{{ (vault "credentials/hcp-consul").data.data.addr }}"
 {{- end }}
 export VAULT_NAMESPACE=admin
 
-# GoLang
+# Go
 export GOPATH=${HOME}/go
 {{- if ne .chezmoi.os "darwin" }}
 export GOROOT=${HOME}/bin/golang
