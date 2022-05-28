@@ -1,2 +1,7 @@
 nodejs 17.5.0
-golang 1.17.7
+golang 1.18
+terraform 1.1.7
+vault 1.9.3
+consul 1.11.3
+nomad 1.2.6
+packer 1.8.0
