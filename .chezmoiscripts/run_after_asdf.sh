@@ -8,6 +8,10 @@ if [[ ! $(asdf plugin list | grep '^golang$') ]]; then
     asdf plugin add golang
 fi
 
+if [[ ! $(asdf plugin list | grep '^boundary$') ]]; then
+    asdf plugin add boundary
+fi
+
 if [[ ! $(asdf plugin list | grep '^terraform$') ]]; then
     asdf plugin add terraform
 fi

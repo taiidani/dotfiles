@@ -32,6 +32,7 @@ export PATH=${PATH}:${HOME}/bin
 export EDITOR='nano'
 export GPG_TTY=`tty`
 export VAULT_ADDR=https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200
+export BOUNDARY_ADDR=https://b034f9c1-8fad-458a-80f3-fc0b1866531c.boundary.hashicorp.cloud
 {{- if eq .chezmoi.os "darwin" }}
 export NOMAD_ADDR=http://nomad.taiidani.com:4646
 {{- end }}
