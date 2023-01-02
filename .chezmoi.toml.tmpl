@@ -1,7 +1,3 @@
-{{- $ip := promptString "ip" -}}
 {{- $email := promptString "email" -}}
-{{- $server := promptBool "server" -}}
 [data]
-ip = {{ $ip | quote }}
 email = {{ $email | quote }}
-server = {{ $server | quote }}

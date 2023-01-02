@@ -1,5 +1,0 @@
-{{ if eq .chezmoi.os "darwin" }}
-consul.hcl
-nomad.hcl
-nomad_volumes.hcl
-{{- end }}
