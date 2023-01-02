@@ -1,7 +1,7 @@
 [user]
 	name = Ryan Nixon
 	email = {{ .email }}
-	signingkey = 0AD07328AEA2A040
+	signingkey = ~/.ssh/id_rsa.pub
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [commit]
@@ -14,7 +14,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 [gpg]
-	program = /usr/local/MacGPG2/bin/gpg
+	format = ssh
 [core]
 	editor = code --wait
 {{- end }}
