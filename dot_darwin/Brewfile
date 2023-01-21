@@ -1,7 +1,28 @@
+brew 'asdf'
 brew 'watch'
 brew 'espanso'
 
-cask 'docker'
-cask 'slack'
 cask '1password'
+cask 'discord'
+cask 'docker'
+cask 'dropbox'
+cask 'fantastical'
+cask 'firefox'
+cask 'iterm2'
 cask 'paw'
+cask 'redisinsight'
+cask 'signal'
+cask 'skitch'
+cask 'slack'
+cask 'spark'
+cask 'transmit'
+cask 'visual-studio-code'
+cask 'zoom'
+
+# iOS App Store additions
+# DaisyDisk
+# GIPHY Capture
+# Magnet
+# Pixelmator Pro
+# Pocket
+# Reeder
