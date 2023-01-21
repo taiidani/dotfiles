@@ -4,7 +4,17 @@ This repository tracks the dotfiles on my personal development machines.
 
 ## Preparation
 
-In order to prepare a fresh install to use my dotfiles, I must:
+In order to prepare a fresh install to use my dotfiles, I must perform some initial setup steps before initializing Chezmoi.
+
+### macOS
+
+1. Install [Homebrew](https://brew.sh/)
+1. Install the prerequisite recipes
+   ```sh
+   brew install chezmoi vault
+   ```
+
+### Linux
 
 1. Install [chezmoi](https://github.com/twpayne/chezmoi) and initialize it.
    ```sh
@@ -17,6 +27,9 @@ In order to prepare a fresh install to use my dotfiles, I must:
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    sudo apt-get update && sudo apt-get install vault
    ```
+
+## Initialization
+
 1. Log into Vault with my [HCP Vault](https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200/ui/vault/secrets?namespace=admin) credentials.
    ```sh
    export VAULT_ADDR=https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200
@@ -25,6 +38,6 @@ In order to prepare a fresh install to use my dotfiles, I must:
    ```
 1. Finally, apply chezmoi into the system.
    ```sh
-   ./bin/chezmoi apply
+   chezmoi apply
    ```
 1. Follow the instructions provided by the chezmoi scripts.
