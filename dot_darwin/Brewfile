@@ -1,4 +1,5 @@
 brew 'asdf'
+brew 'gh'
 brew 'watch'
 brew 'espanso'
 
@@ -14,10 +15,13 @@ cask 'redisinsight'
 cask 'signal'
 cask 'skitch'
 cask 'slack'
-cask 'spark'
 cask 'transmit'
 cask 'visual-studio-code'
 cask 'zoom'
+
+# https://github.com/GitCredentialManager/git-credential-manager
+tap 'microsoft/git'
+cask 'git-credential-manager-core'
 
 # iOS App Store additions
 # DaisyDisk
@@ -26,3 +30,4 @@ cask 'zoom'
 # Pixelmator Pro
 # Pocket
 # Reeder
+# Spark
