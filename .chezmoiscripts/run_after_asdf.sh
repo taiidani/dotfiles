@@ -1,5 +1,6 @@
 #! /bin/bash
 
+echo "Configuring asdf"
 if [[ ! $(asdf plugin list | grep '^nodejs$') ]]; then
     asdf plugin add nodejs
 fi
@@ -37,3 +38,4 @@ if [[ ! $(asdf plugin list | grep '^packer$') ]]; then
 fi
 
 asdf install
+echo "asdf configuration complete"
