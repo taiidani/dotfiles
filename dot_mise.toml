@@ -1,0 +1,20 @@
+[env]
+VAULT_ADDR = "https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200"
+NOMAD_ADDR = "http://hashistack.taiidani.com:4646"
+VAULT_NAMESPACE = "admin"
+EDITOR = "nano"
+
+[tools]
+nodejs = "19.4.0"
+golang = "1.22.1"
+terraform = "1.8.1"
+vault = "1.14.3"
+consul = "1.14.3"
+nomad = "1.8.0"
+packer = "1.8.5"
+boundary = "latest"
+github-cli = "latest"
+vlt = "latest"
+jq = "latest"
+awscli = "latest"
+goreleaser = "latest"

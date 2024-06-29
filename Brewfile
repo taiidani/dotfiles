@@ -1,29 +1,14 @@
-#! /bin/bash
-#
-# iOS App Store additions
-# DaisyDisk
-# GIPHY Capture
-# Magnet
-# Pixelmator Pro
-# Pocket
-# Reeder
-# Spark
-
-echo "Running brew bundle"
-brew bundle --no-lock --file=/dev/stdin <<EOF
-tap 'espanso/espanso'
-
-brew 'asdf'
-brew 'gh'
-brew 'watch'
+brew 'chezmoi'
+brew 'mise'
 
 cask '1password'
+cask 'alfred'
 cask 'discord'
 cask 'docker'
 cask 'dropbox'
-cask 'espanso'
 cask 'fantastical'
 cask 'firefox'
+cask 'font-monaspace'
 cask 'iterm2'
 cask 'paw'
 cask 'redisinsight'
@@ -37,5 +22,6 @@ cask 'zoom'
 # https://github.com/GitCredentialManager/git-credential-manager
 tap 'microsoft/git'
 cask 'git-credential-manager-core'
-EOF
-echo "Brew bundle complete"
+
+vscode "hashicorp.hcl"
+vscode "hashicorp.terraform"

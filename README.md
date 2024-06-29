@@ -9,9 +9,9 @@ In order to prepare a fresh install to use my dotfiles, I must perform some init
 ### macOS
 
 1. Install [Homebrew](https://brew.sh/)
-1. Install the prerequisite recipes
+1. Install the Brew recipes
    ```sh
-   brew install chezmoi vault
+   brew bundle install
    ```
 
 ### Linux
