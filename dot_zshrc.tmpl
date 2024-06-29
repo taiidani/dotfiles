@@ -35,15 +35,6 @@ export PATH=${PATH}:${HOME}/bin
 
 export GPG_TTY=`tty`
 
-# Go
-export GOPATH=${HOME}/go
-{{- if ne .chezmoi.os "darwin" }}
-export GOROOT=${HOME}/bin/golang
-export PATH=${PATH}:${GOROOT}/bin:${GOPATH}/bin
-{{- else }}
-export PATH=${PATH}:${GOPATH}/bin
-{{- end }}
-
 # All the tokens
 export GITHUB_TOKEN="$(mise exec -- gh auth token)"
 export HCP_CLIENT_ID=$(mise exec -- vlt secrets get --plaintext "HCP_CLIENT_ID")
