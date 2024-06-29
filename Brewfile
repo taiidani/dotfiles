@@ -1,5 +1,6 @@
 brew 'chezmoi'
 brew 'mise'
+brew 'zsh-syntax-highlighting'
 
 cask '1password'
 cask 'alfred'
