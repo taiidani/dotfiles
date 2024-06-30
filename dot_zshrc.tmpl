@@ -17,7 +17,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 {{- if eq .chezmoi.os "darwin" }}
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 {{- end }}
 
 # Mise
