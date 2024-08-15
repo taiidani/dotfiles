@@ -5,26 +5,20 @@ brew 'zsh-syntax-highlighting'
 
 cask '1password'
 cask 'alfred'
-cask 'discord'
 cask 'docker'
-cask 'dropbox'
 cask 'fantastical'
 cask 'firefox'
 cask 'font-monaspace'
+cask 'git-credential-manager'
 # cask 'iterm2'
-cask 'wezterm'
 cask 'paw'
 cask 'redisinsight'
-cask 'signal'
 cask 'skitch'
 cask 'slack'
 cask 'transmit'
 cask 'visual-studio-code'
+cask 'wezterm'
 cask 'zoom'
-
-# https://github.com/GitCredentialManager/git-credential-manager
-tap 'microsoft/git'
-cask 'git-credential-manager-core'
 
 vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
