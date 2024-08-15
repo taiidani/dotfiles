@@ -15,6 +15,15 @@ function module.set_appearance(config)
     config.window_decorations = 'RESIZE|INTEGRATED_BUTTONS'
 
     config.native_macos_fullscreen_mode = true
+
+    config.background = {{
+        source = {
+            File = {
+                path = "/Users/rnixon/Documents/HashiCorp/Desktop Wallpapers/Corporate/HashiCorp_Background_Stealth_R.png"
+            }
+
+        }
+    }}
 end
 
 return module
