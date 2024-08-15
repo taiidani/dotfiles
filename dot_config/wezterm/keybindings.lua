@@ -53,6 +53,10 @@ function module.set_key_bindings(config)
         mods = 'SUPER',
         action = wezterm.action.ToggleFullScreen
     }, {
+        key = 'k',
+        mods = 'SUPER',
+        action = wezterm.action.ClearScrollback 'ScrollbackAndViewport'
+    }, {
         -- CMD+Down splits the pane vertically
         key = 'DownArrow',
         mods = 'SUPER',
