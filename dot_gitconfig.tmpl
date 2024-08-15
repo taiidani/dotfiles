@@ -1,7 +1,7 @@
 [user]
 	name = Ryan Nixon
 	email = {{ .email }}
-	signingkey = ~/.ssh/id_rsa.pub
+	signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMkrsshxtm6YzCgnnKNeWWeOTC/QahyeHK1gKA8zg2+h rnixon@hashicorp.com"
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [commit]
@@ -13,15 +13,17 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[gpg]
-	format = ssh
 [core]
 	editor = code --wait
 {{- end }}
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
 [credential]
-       helper =
-       helper = /usr/local/share/gcm-core/git-credential-manager
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
-       useHttpPath = true
+	useHttpPath = true
+[credential "http://localhost:31080"]
+	provider = generic

@@ -1,21 +1,29 @@
 [env]
-VAULT_ADDR = "https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200"
-NOMAD_ADDR = "http://hashistack.taiidani.com:4646"
-VAULT_NAMESPACE = "admin"
-HCP_ORGANIZATION_ID = "rnixon"
+GOPRIVATE = "github.com/hashicorp"
 EDITOR = "nano"
 
+# How many history lines to load in memory
+# For all practical purposes, this is infinite
+HISTSIZE = 999999999
+
+# How many history lines to save to disk
+# For all practical purposes, this is infinite
+SAVEHIST = 999999999
+
 [tools]
-nodejs = "19.4.0"
-golang = "1.22.1"
-terraform = "1.8.1"
-vault = "1.14.3"
-consul = "1.14.3"
-nomad = "1.8.0"
-packer = "1.8.5"
-boundary = "latest"
+nodejs = "22.3.0"
+golang = "1.22.5"
+terraform = "1.9.0"
+vault = "1.13.2"
+nomad = "1.5.7"
 github-cli = "latest"
-vlt = "latest"
-jq = "latest"
 awscli = "latest"
-goreleaser = "latest"
+jq = "latest"
+python = "latest"
+azure-cli = "latest"
+gomplate = "latest"
+"go:github.com/hashicorp/cloud-personal-dev-env/prdectl" = "latest"
+envsubst = "latest"
+yarn = "latest"
+yq = "latest"
+jsonnet = "latest"
