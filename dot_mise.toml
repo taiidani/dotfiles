@@ -2,6 +2,7 @@
 VAULT_ADDR = "https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200"
 NOMAD_ADDR = "http://hashistack.taiidani.com:4646"
 VAULT_NAMESPACE = "admin"
+HCP_ORGANIZATION_ID = "rnixon"
 EDITOR = "nano"
 
 [tools]
