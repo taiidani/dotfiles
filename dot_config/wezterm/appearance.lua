@@ -22,7 +22,7 @@ function module.set_appearance(config)
                 path = "/Users/rnixon/Documents/HashiCorp/Desktop Wallpapers/Corporate/HashiCorp_Background_Stealth_R.png"
             }
         },
-        opacity = 0.5
+        opacity = 0.6
     }}
 end
 
