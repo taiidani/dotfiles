@@ -25,6 +25,3 @@ cask 'zoom'
 # https://github.com/GitCredentialManager/git-credential-manager
 tap 'microsoft/git'
 cask 'git-credential-manager-core'
-
-vscode "hashicorp.hcl"
-vscode "hashicorp.terraform"

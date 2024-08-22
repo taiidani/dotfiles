@@ -1,0 +1,13 @@
+#! /bin/zsh
+
+set -e
+
+if [[ -f $HOME/.vault-token ]]; then
+    echo "✅ Vault authorized"
+else
+    echo "Logging into Vault"
+    export VAULT_ADDR=https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashicorp.cloud:8200
+    export VAULT_NAMESPACE=admin
+    vault login --method=userpass username=rnixon
+    echo "✅ Vault authorized"
+fi
