@@ -8,22 +8,20 @@
   gpgsign = true
 [pull]
 	rebase = false
+[gpg]
+	format = ssh
+[core]
+	editor = code --wait
+[init]
+	defaultBranch = main
+[credential "https://dev.azure.com"]
+       useHttpPath = true
 {{- if eq .chezmoi.os "darwin" }}
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[core]
-	editor = code --wait
-{{- end }}
-[init]
-	defaultBranch = main
-[gpg]
-	format = ssh
 [credential]
-	helper =
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
-[credential "http://localhost:31080"]
-	provider = generic
+       helper =
+       helper = /usr/local/share/gcm-core/git-credential-manager
+{{- end }}

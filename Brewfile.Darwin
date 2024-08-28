@@ -10,7 +10,6 @@ cask 'fantastical'
 cask 'firefox'
 cask 'font-monaspace'
 cask 'git-credential-manager'
-# cask 'iterm2'
 cask 'paw'
 cask 'redisinsight'
 cask 'skitch'
@@ -19,6 +18,3 @@ cask 'transmit'
 cask 'visual-studio-code'
 cask 'wezterm'
 cask 'zoom'
-
-vscode "hashicorp.hcl"
-vscode "hashicorp.terraform"
