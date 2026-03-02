@@ -4,22 +4,16 @@ This repository tracks the dotfiles on my personal development machines.
 
 ## Initialization
 
+1. Clone this repository to your local machine.
+   ```sh
+   git clone https://github.com/taiidani/dotfiles.git ~/.dotfiles
+   ```
 1. Install [Homebrew](https://brew.sh/)
-1. Install the Brew recipes, which include `chezmoi` and `mise` for both Linux and macOS.
+1. Install Mise
    ```sh
-   brew bundle install --file "Brewfile.$(uname)"
+   brew install mise
    ```
-1. Install the `mise` tooling.
+1. Run Dotter to deploy the configurations
    ```sh
-   mise install
-   eval "$(mise activate zsh)"
+   mise exec aqua:SuperCuber/dotter@latest -- dotter deploy --dry-run
    ```
-1. Initialize `chezmoi`.
-   ```sh
-   chezmoi init taiidani
-   ```
-1. Finally, apply chezmoi into the system.
-   ```sh
-   chezmoi apply
-   ```
-1. Follow the instructions provided by the chezmoi scripts.
