@@ -6,8 +6,11 @@ depends = []
 [default.files]
 skills = "~/.claude/skills"
 zshrc = "~/.zshrc"
+"mise.toml" = "~/.config/mise.toml"
+gitconfig = "~/.gitconfig"
 
 [default.variables]
+email = "r.taiidani@gmail.com"
 
 [settings]
 default_target_type = "automatic"

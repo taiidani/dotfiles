@@ -1,0 +1,16 @@
+[user]
+	name = Ryan Nixon
+	email = {{email}}
+	signingkey = ~/.ssh/id_ed25519.pub
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[commit]
+  gpgsign = true
+[pull]
+	rebase = false
+[gpg]
+	format = ssh
+[init]
+	defaultBranch = main
+[core]
+	editor = zed --wait

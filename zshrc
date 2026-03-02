@@ -1,29 +1,47 @@
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt inc_append_history
+bindkey "\e[A" history-beginning-search-backward
+bindkey "\e[B" history-beginning-search-forward
+# Don't add certain commands to the history file.
+HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|* --help)"
+# Ignore commands that start with spaces and duplicates.
+HISTCONTROL=ignoreboth
 
-# Set name of the theme to load
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# Fish-like syntax highlighting and autosuggestions
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# Use history substring search
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+# Delete key acting funky and inserting a tilde?
+bindkey "^[[3~" delete-char
 
-plugins=(git)
+# Make new shells get the history lines from all previous
+# shells instead of the default "last window closed" history.
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-source $ZSH/oh-my-zsh.sh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Git integration
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+# RPROMPT='${vcs_info_msg_0_}'
+# PROMPT='%# ${vcs_info_msg_0_}'
+zstyle ':vcs_info:git:*' formats '%b'
+
+# Prompt theming - should be done after the git integration
+PROMPT='%F{blue}%B%~%b%f %F{green}${vcs_info_msg_0_}❯%f '
+
+# Completion
+autoload -U compinit && compinit
 
 # Mise
 eval "$(mise activate zsh)"
 
-# All the tokens
-export GITHUB_TOKEN=$(mise exec -- gh auth token)
-export HCP_CLIENT_ID=$(mise exec -- vlt secrets get --plaintext "HCP_CLIENT_ID")
-export HCP_CLIENT_SECRET=$(mise exec -- vlt secrets get --plaintext "HCP_CLIENT_SECRET")
-export HCP_ORGANIZATION_ID=$(mise exec -- vlt secrets get --plaintext "HCP_ORGANIZATION_ID")
+# GitHub
+export GITHUB_TOKEN="$(gh auth token)"
+export PATH="$HOME/.local/bin:$PATH"
