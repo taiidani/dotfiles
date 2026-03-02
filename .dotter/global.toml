@@ -5,6 +5,7 @@ depends = []
 
 [default.files]
 skills = "~/.claude/skills"
+zshrc = "~/.zshrc"
 
 [default.variables]
 
