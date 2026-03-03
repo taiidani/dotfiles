@@ -11,6 +11,7 @@ gitconfig = "~/.gitconfig"
 
 [default.variables]
 email = "r.taiidani@gmail.com"
+zsh_addons_path = "/usr/share/zsh/plugins"
 
 [settings]
 default_target_type = "automatic"

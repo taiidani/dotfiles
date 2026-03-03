@@ -11,11 +11,11 @@ HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|* --help)"
 HISTCONTROL=ignoreboth
 
 # Fish-like syntax highlighting and autosuggestions
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source {{zsh_addons_path}}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source {{zsh_addons_path}}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Use history substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source {{zsh_addons_path}}/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Delete key acting funky and inserting a tilde?
 bindkey "^[[3~" delete-char

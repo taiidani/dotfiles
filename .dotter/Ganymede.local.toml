@@ -4,3 +4,4 @@ packages = ["default"]
 [files]
 
 [variables]
+zsh_addons_path = "/opt/homebrew/share"

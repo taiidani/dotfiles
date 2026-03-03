@@ -10,7 +10,7 @@
 	rebase = false
 [gpg]
 	format = ssh
-[init]
-	defaultBranch = main
 [core]
 	editor = zed --wait
+[init]
+	defaultBranch = main
