@@ -3,8 +3,10 @@ VAULT_ADDR = "https://rnd.vault.0846e66f-a975-4a88-9e46-6dc6267e9b73.aws.hashico
 VAULT_NAMESPACE = "admin"
 HCP_ORGANIZATION_ID = "rnixon"
 EDITOR = "nano"
+SSH_AUTH_SOCK = "/home/rnixon/.1password/agent.sock"
 
 [tools]
+1password = "latest"
 awscli = "latest"
 "aqua:SuperCuber/dotter" = "latest"
 github-cli = "latest"
