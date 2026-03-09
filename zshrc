@@ -2,13 +2,11 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
-setopt inc_append_history
-bindkey "\e[A" history-beginning-search-backward
-bindkey "\e[B" history-beginning-search-forward
+setopt share_history
+setopt hist_ignore_space
+setopt hist_ignore_dups
 # Don't add certain commands to the history file.
 HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|* --help)"
-# Ignore commands that start with spaces and duplicates.
-HISTCONTROL=ignoreboth
 
 # Fish-like syntax highlighting and autosuggestions
 source {{zsh_addons_path}}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -16,13 +14,17 @@ source {{zsh_addons_path}}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Use history substring search
 source {{zsh_addons_path}}/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey "\e[A" history-substring-search-up
+bindkey "\e[B" history-substring-search-down
 
 # Delete key acting funky and inserting a tilde?
 bindkey "^[[3~" delete-char
+bindkey "\e[H"  beginning-of-line
+bindkey "\e[F"  end-of-line
 
-# Make new shells get the history lines from all previous
-# shells instead of the default "last window closed" history.
-export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+setopt auto_cd
+setopt correct
+setopt interactive_comments
 
 # Git integration
 autoload -Uz vcs_info
@@ -38,6 +40,8 @@ PROMPT='%F{blue}%B%~%b%f %F{green}${vcs_info_msg_0_}❯%f '
 
 # Completion
 autoload -U compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Mise
 eval "$(mise activate zsh)"
