@@ -8,7 +8,6 @@ skills = "~/.claude/skills"
 zshrc = "~/.zshrc"
 "mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
-ssh_config = "~/.ssh/config"
 
 [default.variables]
 email = "r.taiidani@gmail.com"
