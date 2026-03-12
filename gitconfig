@@ -12,5 +12,6 @@
 	format = ssh
 [core]
 	editor = zed --wait
+	excludesFile = ~/.config/git/excludes
 [init]
 	defaultBranch = main
