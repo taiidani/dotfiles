@@ -4,7 +4,7 @@
 depends = []
 
 [default.files]
-".claude/skills" = "~/.claude/skills"
+".claude/skills/obsidian" = "~/.claude/skills/obsidian"
 zshrc = "~/.zshrc"
 "mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
@@ -13,6 +13,22 @@ gitconfig = "~/.gitconfig"
 [default.variables]
 email = "r.taiidani@gmail.com"
 zsh_addons_path = "/usr/share/zsh/plugins"
+
+[home]
+depends = ["default"]
+
+[home.files]
+".claude/skills/dependabot-merger" = "~/.claude/skills/dependabot-merger"
+
+[work]
+depends = ["default"]
+
+[work.files]
+".claude/skills/coder" = "~/.claude/skills/coder"
+".claude/skills/jira" = "~/.claude/skills/jira"
+".claude/skills/mail" = "~/.claude/skills/mail"
+".crc/crc.json" = "~/.crc/crc.json"
+ssh_config = "~/.ssh/config"
 
 [settings]
 default_target_type = "automatic"

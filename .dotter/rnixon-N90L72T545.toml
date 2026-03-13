@@ -1,9 +1,7 @@
 includes = []
-packages = ["default"]
+packages = ["default", "work"]
 
 [files]
-".crc/crc.json" = "~/.crc/crc.json"
-ssh_config = "~/.ssh/config"
 
 [variables]
 email = "rnixon@hashicorp.com"
