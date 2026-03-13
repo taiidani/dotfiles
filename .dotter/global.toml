@@ -5,6 +5,7 @@ depends = []
 
 [default.files]
 ".claude/skills/obsidian" = "~/.claude/skills/obsidian"
+".claude/skills/go" = "~/.claude/skills/go"
 "mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
 ".config/git/excludes" = "~/.config/git/excludes"
