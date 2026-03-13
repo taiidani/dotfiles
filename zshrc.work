@@ -71,7 +71,7 @@ eval "$(tfcdev rc --no-export GITHUB_TOKEN,HOMEBREW_GITHUB_API_TOKEN)"
 
 daily-routine() {
     cd ~/hashicorp
-    ssh-add
     doormat login
-    copilot -i "Start my daily routine" --add-dir "/Users/rnixon/hashicorp" --add-dir "/dev/null" --add-dir "/tmp" --add-dir "/Users/rnixon/Library/Mobile Documents/iCloud~md~obsidian/" --add-dir "obsidian" --allow-all-tools
+    opencode run "Start my /daily-routine"
+    # --add-dir "/Users/rnixon/hashicorp" --add-dir "/dev/null" --add-dir "/tmp" --add-dir "/Users/rnixon/Library/Mobile Documents/iCloud~md~obsidian/" --add-dir "obsidian" --allow-all-tools
 }
