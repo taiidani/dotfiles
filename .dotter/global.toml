@@ -29,6 +29,7 @@ depends = ["default"]
 ".claude/skills/mail" = "~/.claude/skills/mail"
 ".crc/crc.json" = "~/.crc/crc.json"
 ".ssh/config" = "~/.ssh/config"
+"mise.work.toml" = "~/.mise.toml"
 "zshrc.work" = "~/.zshrc"
 
 [settings]
