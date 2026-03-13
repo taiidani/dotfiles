@@ -4,11 +4,11 @@
 depends = []
 
 [default.files]
-skills = "~/.claude/skills"
+".claude/skills" = "~/.claude/skills"
 zshrc = "~/.zshrc"
 "mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
-gitexcludes = "~/.config/git/excludes"
+".config/git/excludes" = "~/.config/git/excludes"
 
 [default.variables]
 email = "r.taiidani@gmail.com"

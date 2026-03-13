@@ -5,7 +5,7 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [commit]
-  gpgsign = true
+    gpgsign = true
 [pull]
 	rebase = false
 [gpg]
@@ -15,3 +15,5 @@
 	excludesFile = ~/.config/git/excludes
 [init]
 	defaultBranch = main
+[column]
+    ui = auto

@@ -1,0 +1,10 @@
+includes = []
+packages = ["default"]
+
+[files]
+".crc/crc.json" = "~/.crc/crc.json"
+ssh_config = "~/.ssh/config"
+
+[variables]
+email = "rnixon@hashicorp.com"
+zsh_addons_path = "/opt/homebrew/share"
