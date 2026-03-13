@@ -27,10 +27,16 @@ depends = ["default"]
 ".claude/skills/coder" = "~/.claude/skills/coder"
 ".claude/skills/jira" = "~/.claude/skills/jira"
 ".claude/skills/mail" = "~/.claude/skills/mail"
-".crc/crc.json" = "~/.crc/crc.json"
 ".ssh/config" = "~/.ssh/config"
 "mise.work.toml" = "~/.mise.toml"
 "zshrc.work" = "~/.zshrc"
+
+[crc]
+depends = ["work"]
+
+[crc.files]
+".crc/crc.json" = "~/.crc/crc.json"
+".testcontainers.properties" = { target = "~/.testcontainers.properties", type = "symbolic" }
 
 [settings]
 default_target_type = "automatic"
