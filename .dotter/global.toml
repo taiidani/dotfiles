@@ -30,9 +30,10 @@ depends = ["default"]
 ".claude/skills/daily-routine" = "~/.claude/skills/daily-routine"
 ".claude/skills/jira" = "~/.claude/skills/jira"
 ".claude/skills/mail" = "~/.claude/skills/mail"
+".claude/skills/slack" = "~/.claude/skills/slack"
 ".ssh/config" = "~/.ssh/config"
 "mise.work.toml" = "~/.mise.toml"
-"zshrc.work" = "~/.zshrc"
+"zshrc.work.zsh" = "~/.zshrc"
 
 [crc]
 depends = ["work"]

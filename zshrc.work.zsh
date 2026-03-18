@@ -4,7 +4,8 @@ HISTSIZE=100000
 SAVEHIST=100000
 setopt share_history
 setopt hist_ignore_space
-setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_expire_dups_first
 # Don't add certain commands to the history file.
 HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|* --help)"
 
@@ -50,8 +51,8 @@ eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 
 # CRC
-eval "$(crc podman-env)"
-eval "$(crc oc-env)"
+# eval "$(crc podman-env)"
+# eval "$(crc oc-env)"
 
 # SW
 export GITHUB_TOKEN="$(mise exec -- gh auth token)"
