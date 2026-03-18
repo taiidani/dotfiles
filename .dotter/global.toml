@@ -19,6 +19,7 @@ depends = ["default"]
 
 [home.files]
 ".claude/skills/dependabot-merger" = "~/.claude/skills/dependabot-merger"
+".claude/settings.local.json" = "~/.claude/settings.local.json"
 zshrc = "~/.zshrc"
 
 [work]
