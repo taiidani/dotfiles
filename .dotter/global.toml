@@ -6,9 +6,11 @@ depends = []
 [default.files]
 ".claude/skills/obsidian" = "~/.claude/skills/obsidian"
 ".claude/skills/go" = "~/.claude/skills/go"
+".config/git/excludes" = "~/.config/git/excludes"
+".config/opencode/opencode.json" = "~/.config/opencode/opencode.json"
 "mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
-".config/git/excludes" = "~/.config/git/excludes"
+
 
 [default.variables]
 email = "r.taiidani@gmail.com"
