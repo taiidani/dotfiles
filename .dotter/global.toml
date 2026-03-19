@@ -6,6 +6,7 @@ depends = []
 [default.files]
 ".config/git/excludes" = "~/.config/git/excludes"
 ".config/opencode/opencode.json" = "~/.config/opencode/opencode.json"
+".opencode/skills/gh-cli" = "~/.opencode/skills/gh-cli"
 ".opencode/skills/go" = "~/.opencode/skills/go"
 ".opencode/skills/mise" = "~/.opencode/skills/mise"
 ".opencode/skills/obsidian" = "~/.opencode/skills/obsidian"
