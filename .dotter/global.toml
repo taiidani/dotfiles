@@ -4,13 +4,12 @@
 depends = []
 
 [default.files]
-".claude/skills/obsidian" = "~/.claude/skills/obsidian"
-".claude/skills/go" = "~/.claude/skills/go"
 ".config/git/excludes" = "~/.config/git/excludes"
 ".config/opencode/opencode.json" = "~/.config/opencode/opencode.json"
+".opencode/skills/obsidian" = "~/.opencode/skills/obsidian"
+".opencode/skills/go" = "~/.opencode/skills/go"
 "mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
-
 
 [default.variables]
 email = "r.taiidani@gmail.com"
@@ -20,19 +19,19 @@ zsh_addons_path = "/usr/share/zsh/plugins"
 depends = ["default"]
 
 [home.files]
-".claude/skills/dependabot-merger" = "~/.claude/skills/dependabot-merger"
 ".claude/settings.local.json" = "~/.claude/settings.local.json"
+".opencode/skills/dependabot-merger" = "~/.opencode/skills/dependabot-merger"
 zshrc = "~/.zshrc"
 
 [work]
 depends = ["default"]
 
 [work.files]
-".claude/skills/coder" = "~/.claude/skills/coder"
-".claude/skills/daily-routine" = "~/.claude/skills/daily-routine"
-".claude/skills/jira" = "~/.claude/skills/jira"
-".claude/skills/mail" = "~/.claude/skills/mail"
-".claude/skills/slack" = "~/.claude/skills/slack"
+".opencode/skills/coder" = "~/.opencode/skills/coder"
+".opencode/skills/daily-routine" = "~/.opencode/skills/daily-routine"
+".opencode/skills/jira" = "~/.opencode/skills/jira"
+".opencode/skills/mail" = "~/.opencode/skills/mail"
+".opencode/skills/slack" = "~/.opencode/skills/slack"
 ".ssh/config" = "~/.ssh/config"
 "mise.work.toml" = "~/.mise.toml"
 "zshrc.work.zsh" = "~/.zshrc"
