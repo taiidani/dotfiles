@@ -22,6 +22,7 @@ depends = ["default"]
 
 [home.files]
 ".claude/settings.local.json" = "~/.claude/settings.local.json"
+".config/ghostty/config" = "~/.config/ghostty/config"
 ".opencode/skills/dependabot-merger" = "~/.opencode/skills/dependabot-merger"
 zshrc = "~/.zshrc"
 
