@@ -1,6 +1,9 @@
+[settings]
+env_shell_expand = true
+
 [env]
 EDITOR = "nano"
-SSH_AUTH_SOCK = "/home/rnixon/.1password/agent.sock"
+SSH_AUTH_SOCK = "$HOME/.1password/agent.sock"
 
 [tools]
 "aqua:SuperCuber/dotter" = "latest"
