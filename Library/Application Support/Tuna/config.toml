@@ -1,0 +1,97 @@
+schemaVersion = 1
+
+[extensions]
+enabledIdentifiers = [ 'com.brnbw.tuna.plugins.github', 'com.brnbw.tuna.plugins.obsidian' ]
+
+[hotkeys]
+custom = []
+
+    [hotkeys.app.activate]
+    carbonKeyCode = 49
+    carbonModifiers = 256
+
+    [hotkeys.app.leaderMode]
+    carbonKeyCode = 49
+    carbonModifiers = 2304
+
+    [hotkeys.app.textMode]
+    carbonKeyCode = 49
+    carbonModifiers = 6400
+
+[[leaderMode.bindings]]
+key = 's'
+url = 'tuna://run/path.%252FApplications%252FSafari.app/Open'
+
+[[leaderMode.bindings]]
+key = 't'
+url = 'tuna://run/path.%252FSystem%252FApplications%252FUtilities%252FTerminal.app/Open'
+
+[[leaderMode.bindings]]
+key = 'f'
+url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
+
+[[leaderMode.bindings]]
+key = 'm'
+url = 'tuna://run/path.%252FSystem%252FApplications%252FMessages.app/Open'
+
+[[leaderMode.bindings]]
+key = 'n'
+url = 'tuna://run/path.%252FSystem%252FApplications%252FNotes.app/Open'
+
+[[leaderMode.bindings]]
+key = 'd'
+url = 'tuna://run/path.%252FUsers%252Frnixon%252FDownloads/Open'
+
+[[leaderMode.bindings]]
+key = 'h'
+url = 'tuna://run/path.%252FUsers%252Frnixon/Open'
+
+[[leaderMode.bindings]]
+key = 'g'
+url = 'tuna://run/TunaGitHub.GitHubMyRepositoriesCatalog.My%20Repositories/Tuna.BasicActionsCatalog.Browse'
+
+[settings]
+leaderModeModifierTrigger = 'hyper'
+physicalHyperKeySource = 'rightOption'
+themeIdentifier = 'com.brnbw.tuna.themes.default'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'Bing'
+template = 'https://www.bing.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'DuckDuckGo'
+template = 'https://duckduckgo.com/?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = true
+name = 'GitHub'
+template = 'https://github.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'Google'
+template = 'https://www.google.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'Stack Overflow'
+template = 'https://stackoverflow.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = true
+name = 'Wikipedia'
+template = 'https://en.wikipedia.org/wiki/Special:Search?search={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'YouTube'
+template = 'https://www.youtube.com/results?search_query={{input}}'
+
+[[catalogSettings]]
+catalogIdentifier = 'com.brnbw.tuna.themes.default'
+
+    [catalogSettings.values]
+    ThemeTint = 'system'

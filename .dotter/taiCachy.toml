@@ -1,7 +1,6 @@
 includes = []
-packages = ["default", "home"]
+packages = ["default", "home", "linux"]
 
 [files]
-".ssh/config" = "~/.ssh/config"
 
 [variables]

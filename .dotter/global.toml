@@ -22,7 +22,6 @@ depends = ["default"]
 
 [home.files]
 ".claude/settings.local.json" = "~/.claude/settings.local.json"
-".config/ghostty/config" = "~/.config/ghostty/config"
 ".opencode/skills/dependabot-merger" = "~/.opencode/skills/dependabot-merger"
 zshrc = "~/.zshrc"
 
@@ -35,9 +34,16 @@ depends = ["default"]
 ".opencode/skills/jira" = "~/.opencode/skills/jira"
 ".opencode/skills/mail" = "~/.opencode/skills/mail"
 ".opencode/skills/slack" = "~/.opencode/skills/slack"
-".ssh/config" = "~/.ssh/config"
 "mise.work.toml" = "~/.mise.toml"
 "zshrc.work.zsh" = "~/.zshrc"
+
+[linux.files]
+".config/ghostty/config" = "~/.config/ghostty/config"
+".ssh/config" = "~/.ssh/config"
+
+[macos.files]
+"Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
+"Library/Application Support/com.mitchellh.ghostty/config" = "~/Library/Application Support/com.mitchellh.ghostty/config"
 
 [crc]
 depends = ["work"]

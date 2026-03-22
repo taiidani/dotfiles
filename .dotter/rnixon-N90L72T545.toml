@@ -1,5 +1,5 @@
 includes = []
-packages = ["default", "work", "crc"]
+packages = ["default", "work", "linux", "crc"]
 
 [files]
 
