@@ -31,10 +31,6 @@ key = 'f'
 url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
 
 [[leaderMode.bindings]]
-key = 'm'
-url = 'tuna://run/path.%252FSystem%252FApplications%252FMessages.app/Open'
-
-[[leaderMode.bindings]]
 key = 'n'
 url = 'tuna://run/path.%252FSystem%252FApplications%252FNotes.app/Open'
 
@@ -49,6 +45,82 @@ url = 'tuna://run/path.%252FUsers%252Frnixon/Open'
 [[leaderMode.bindings]]
 key = 'g'
 url = 'tuna://run/TunaGitHub.GitHubMyRepositoriesCatalog.My%20Repositories/Tuna.BasicActionsCatalog.Browse'
+
+[[leaderMode.bindings]]
+iconPath = 'phone.circle'
+key = 'c'
+label = 'callout'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'exclamationmark.circle.fill'
+    key = 's'
+    label = 'success'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.%25253E%252520%25255B!SUCCESS%25255D%25250A%25253E%252520%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'exclamationmark.circle.fill'
+    key = 'w'
+    label = 'warning'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.%25253E%252520%25255B!WARNING%25255D%25250A%25253E%252520%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'exclamationmark.circle.fill'
+    key = 'n'
+    label = 'note'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.%25253E%252520%25255B!NOTE%25255D%25250A%25253E%252520%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+[[leaderMode.bindings]]
+iconPath = 'square.and.pencil.circle'
+key = 'r'
+label = 'callout'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'questionmark'
+    key = 'q'
+    label = 'question'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.Question%252520%2525F0%25259F%252599%25258B%252520-%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'photo.artframe'
+    key = 'o'
+    label = 'optional'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.Optional%252520%2525F0%25259F%25258E%2525A8%252520-%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'pin.fill'
+    key = 'f'
+    label = 'future'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.Future%252520%2525F0%25259F%252593%25258C%252520-%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'hammer.fill'
+    key = 'n'
+    label = 'nitpick'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.Nitpick%252520%2525E2%25259B%25258F%2525EF%2525B8%25258F%252520-%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'hands.clap.fill'
+    key = 'p'
+    label = 'praise'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.Praise%252520%2525F0%25259F%252599%25258C%252520-%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'ellipsis.bubble.fill'
+    key = 't'
+    label = 'thought'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.Thought%252520%2525F0%25259F%252592%2525AD%252520-%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'stop.circle'
+    key = 'b'
+    label = 'blocker'
+    url = 'tuna://run/url.tuna:%252F%252Frun%252Ftext.Blocker%252520%2525F0%25259F%25259A%2525A7%252520-%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL'
+
+[[leaderMode.bindings]]
+iconPath = 'exclamationmark.circle.fill'
+key = 'p'
+label = 'pull'
+url = "tuna://run/url.tuna:%252F%252Frun%252Ftext.%252523%252523%252520What%252520and%252520How%252520%2525F0%25259F%25259B%2525A0%2525EF%2525B8%25258F%25250A%25250A%25253C!--%25250AList%252520out%252520the%252520changes%252520proposed%252520in%252520this%252520PR.%25250ADive%252520into%252520the%252520approach%252520you%252520took,%252520list%252520resources%252520you%252520referenced,%252520detail%252520other%252520approaches%252520you%252520tried%252520but%252520didn't%252520end%252520up%252520going%252520with,%252520etc.%25250A--%25253E%25250A%25250A%252523%252523%252520Why%252520%2525F0%25259F%2525A4%2525B7%25250A%25250A%25253C!--%25250ADescribe%252520why%252520the%252520changes%252520proposed%252520are%252520needed.%252520Some%252520examples:%252520new%252520feature%252520requested,%252520refactor%252520to%252520make%252520things%252520easier%252520later,%252520bug%252520fix,%252520etc.%25250AInclude%252520a%252520link%252520to%252520the%252520JIRA%252520ticket,%252520and%252520any%252520other%252520links%252520that%252520might%252520make%252520it%252520easier%252520to%252520understand%252520the%252520reason%252520for%252520your%252520PR.%25250A--%25253E%25250A%25250A-%252520%25255BTicket%25255D(https:%252F%252Fhashicorp.atlassian.net%252Fbrowse%252Fxxxx)%252520%2525F0%25259F%25258E%25259F%2525EF%2525B8%25258F%25250A%25250A%252523%252523%252520Testing%252520%2525F0%25259F%2525A7%2525AA%25250A%25250A%25253C!--%25250ACreate%252520a%252520checklist%252520for%252520going%252520through%252520how%252520to%252520test%252520your%252520proposed%252520changes.%252520If%252520there%252520is%252520anything%252520to%252520configure%252520before%252520interacting%252520with%252520the%252520project,%252520such%252520as%252520changing%252520machine%252520settings,%252520list%252520those%252520steps%252520first.%25250A%25250A-%252520Step%2525201%25250A-%252520Step%2525202%25250A-%252520Step%2525203%25250A-%252520...%25250A--%25253E%25250A%25250A%252523%252523%252520Anything%252520else%253F%252520%2525F0%25259F%252592%2525AD%25250A%25250A%25253C!--%25250AList%252520any%252520post-merge%252520steps,%252520rollback%252520plans,%252520or%252520other%252520information%252520that%252520might%252520be%252520useful%252520for%252520reviewers%252520to%252520know.%25250AIf%252520you%252520came%252520across%252520something%252520that%252520you%252520chose%252520not%252520to%252520address%252520in%252520this%252520PR%252520but%252520plan%252520to%252520soon,%252520list%252520those%252520items%252520here%252520and%252520any%252520JIRA%252520tasks%252520you%252520created%252520to%252520go%252520with%252520them.%25250A--%25253E%252FTunaCore.CommonActionsCatalog.Paste%253Fshow=false/Open%20URL"
 
 [settings]
 leaderModeModifierTrigger = 'hyper'
