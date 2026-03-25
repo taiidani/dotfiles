@@ -6,6 +6,7 @@ depends = []
 [default.files]
 ".config/git/excludes" = "~/.config/git/excludes"
 ".config/opencode/opencode.json" = "~/.config/opencode/opencode.json"
+".opencode/commands" = "~/.opencode/commands"
 ".opencode/agents" = "~/.opencode/agents"
 ".opencode/skills/gh-cli" = "~/.opencode/skills/gh-cli"
 ".opencode/skills/go" = "~/.opencode/skills/go"
@@ -43,8 +44,11 @@ depends = ["default"]
 ".ssh/config" = "~/.ssh/config"
 
 [macos.files]
-"Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
 "Library/Application Support/com.mitchellh.ghostty/config" = "~/Library/Application Support/com.mitchellh.ghostty/config"
+
+# Tuna does not support symlinked scripts
+# "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
+"Library/Scripts" = { target = "~/Library/Scripts", type = "template" }
 
 [crc]
 depends = ["work"]
