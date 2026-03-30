@@ -45,8 +45,6 @@ depends = ["default"]
 ".ssh/config" = "~/.ssh/config"
 
 [macos.files]
-"Library/Application Support/com.mitchellh.ghostty/config" = "~/Library/Application Support/com.mitchellh.ghostty/config"
-
 # Tuna does not support symlinked scripts
 # "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
 "Library/Scripts" = { target = "~/Library/Scripts", type = "template" }

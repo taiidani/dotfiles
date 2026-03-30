@@ -1,0 +1,15 @@
+# keybind = global:cmd+grave_accent=toggle_quick_terminal
+# keybind = global:option+space=toggle_quick_terminal
+quick-terminal-screen = mouse
+quick-terminal-position = top
+# quick-terminal-size = "50%"
+
+shell-integration-features = "ssh-env"
+
+background-image = "/Users/rnixon/Library/CloudStorage/Box-Box/Desktop Wallpapers/Corporate/HashiCorp_Background_Stealth_R.png"
+background-image-fit = "cover"
+background-image-opacity = 0.5
+background-opacity = 0.9
+background-blur-radius = 20
+
+# font-family = "IBM Plex Mono"

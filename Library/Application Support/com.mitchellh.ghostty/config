@@ -1,11 +1,11 @@
+# keybind = global:cmd+space=toggle_quick_terminal
+# keybind = global:option+space=toggle_quick_terminal
+quick-terminal-screen = mouse
+quick-terminal-position = top
+# quick-terminal-size = "50%"
+
+shell-integration-features = "ssh-env"
+
 theme = tokyonight
 background-opacity = 0.7
 background-blur-radius = 10
-# keybind = global:cmd+space=toggle_quick_terminal
-keybind = global:option+space=toggle_quick_terminal
-
-# quick-terminal-screen = main
-quick-terminal-screen = mouse
-quick-terminal-position = top
-
-shell-integration-features = "ssh-env"

@@ -1,7 +1,8 @@
 includes = []
-packages = ["default", "work", "linux", "crc"]
+packages = ["default", "work", "macos", "crc"]
 
 [files]
+"Library/Application Support/com.mitchellh.ghostty/config.work" = "~/Library/Application Support/com.mitchellh.ghostty/config"
 
 [variables]
 email = "rnixon@hashicorp.com"

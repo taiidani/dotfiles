@@ -2,6 +2,7 @@ includes = []
 packages = ["default", "home", "macos"]
 
 [files]
+"Library/Application Support/com.mitchellh.ghostty/config" = "~/Library/Application Support/com.mitchellh.ghostty/config"
 
 [variables]
 zsh_addons_path = "/opt/homebrew/share"
