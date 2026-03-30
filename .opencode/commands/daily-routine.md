@@ -1,19 +1,17 @@
 ---
-name: daily-routine
-description: A daily set of operations I perform when starting my workday, including updating my daily note with meetings and Jira tickets. I'll often invoke this by saying "Start my daily routine".
+description: A daily set of operations I perform when starting my workday, including updating my daily note with meetings and unread emails.
 ---
 
 # Daily Routine
 
-Every morning, I will ask to perform my daily routine. This routine involves writing status updates in my daily Obsidian note for each of my currently assigned Jira tickets and performing specific housekeeping operations on my system.
+Every morning, I will perform my daily routine. This routine involves writing status updates in my daily Obsidian note and performing specific housekeeping operations on my system.
 
 ## Obsidian Daily Note
 
-The daily note can be accessed through the /obsidian skill. If the note does not yet exist, I should be prompted to create it. If the note exists already and has a populated "Tasks" section, skip the entire rest of this "Obsidian Daily Note" section. Please perform this check before anything else as the other steps (Calendar, Jira) are expensive to perform.
+The daily note can be accessed through the /obsidian skill. If the note does not yet exist, I should be prompted to create it. If the note exists already and has a populated "Tasks" section, skip the entire rest of this "Obsidian Daily Note" section. Please perform this check before anything else as the other steps (Calendar, Email) are expensive to perform.
 
 The note will have a "Tasks" heading with two subsections:
 - **Meetings**: One line per meeting I am attending today based on my current calendar
-- **Jira Tickets**: One line per open Jira ticket I am currently assigned to
 - **Unread Emails**: One line per email in my inbox that I have not yet read.
 
 When I perform my daily routine, the "Tasks" section should be updated with the latest information available from these sources.
@@ -33,19 +31,6 @@ icalBuddy -ic "Calendar" eventsToday
   - Lunch
   - Focus Time
 
-### Jira Access
-
-Instructions for accessing Jira are stored in the /jira skill.
-
-#### Formatting
-- Format each ticket as: `- Jira:<TICKET-KEY>`
-- Obsidian will automatically render the ticket information and status via a plugin
-- Do not include the summary or status in the line; only the `Jira:<KEY>` format is needed
-
-#### Exclusions
-- Exclude tickets with status "Needs More Info"
-- Exclude tickets in the Done status category (e.g., Done, Closed, Fixed, Dismissed)
-
 ### Email Access
 
 Instructions for accessing the macOS Mail app are stored in the "mail" skill.
@@ -58,7 +43,7 @@ Instructions for accessing the macOS Mail app are stored in the "mail" skill.
 ## Obsidian Tagging Review
 
 This step should be performed after the completion of the Obsidian Daily Note.
-Recently modified notes in the /obsidian vault should be reviewed for content and tagged appropriately.
+Recently modified notes in the `hashicorp` vault should be reviewed for content and tagged appropriately.
 The content of the notes themselves should not be modified, only the front matter.
 
 Guidance for this action:

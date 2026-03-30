@@ -31,8 +31,9 @@ zshrc = "~/.zshrc"
 depends = ["default"]
 
 [work.files]
+".opencode/commands/daily-routine.md" = "~/.opencode/commands/daily-routine.md"
+".opencode/commands/jira-sync.md" = "~/.opencode/commands/jira-sync.md"
 ".opencode/skills/coder" = "~/.opencode/skills/coder"
-".opencode/skills/daily-routine" = "~/.opencode/skills/daily-routine"
 ".opencode/skills/jira" = "~/.opencode/skills/jira"
 ".opencode/skills/mail" = "~/.opencode/skills/mail"
 ".opencode/skills/slack" = "~/.opencode/skills/slack"
