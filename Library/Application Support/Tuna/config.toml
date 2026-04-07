@@ -1,8 +1,5 @@
 schemaVersion = 1
 
-[extensions]
-enabledIdentifiers = [ 'com.brnbw.tuna.plugins.github', 'com.brnbw.tuna.plugins.obsidian' ]
-
 [hotkeys]
 custom = []
 
@@ -130,36 +127,43 @@ themeIdentifier = 'com.brnbw.tuna.themes.default'
 [[smartLinks.entries]]
 enabled = false
 name = 'Bing'
+requiresInput = true
 template = 'https://www.bing.com/search?q={{input}}'
 
 [[smartLinks.entries]]
 enabled = false
 name = 'DuckDuckGo'
+requiresInput = true
 template = 'https://duckduckgo.com/?q={{input}}'
 
 [[smartLinks.entries]]
 enabled = true
 name = 'GitHub'
+requiresInput = true
 template = 'https://github.com/search?q={{input}}'
 
 [[smartLinks.entries]]
 enabled = false
 name = 'Google'
+requiresInput = true
 template = 'https://www.google.com/search?q={{input}}'
 
 [[smartLinks.entries]]
 enabled = false
 name = 'Stack Overflow'
+requiresInput = true
 template = 'https://stackoverflow.com/search?q={{input}}'
 
 [[smartLinks.entries]]
 enabled = true
 name = 'Wikipedia'
+requiresInput = true
 template = 'https://en.wikipedia.org/wiki/Special:Search?search={{input}}'
 
 [[smartLinks.entries]]
 enabled = false
 name = 'YouTube'
+requiresInput = true
 template = 'https://www.youtube.com/results?search_query={{input}}'
 
 [[catalogSettings]]
