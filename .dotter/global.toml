@@ -12,7 +12,6 @@ depends = []
 ".opencode/skills/go" = "~/.opencode/skills/go"
 ".opencode/skills/mise" = "~/.opencode/skills/mise"
 ".opencode/skills/obsidian" = "~/.opencode/skills/obsidian"
-"mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
 
 [default.variables]
@@ -25,6 +24,7 @@ depends = ["default"]
 [home.files]
 ".claude/settings.local.json" = "~/.claude/settings.local.json"
 ".opencode/skills/dependabot-merger" = "~/.opencode/skills/dependabot-merger"
+"mise.toml" = "~/.config/mise/config.toml"
 zshrc = "~/.zshrc"
 
 [linux.files]

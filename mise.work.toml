@@ -6,13 +6,21 @@ idiomatic_version_file_enable_tools = ["ruby"]
 [settings.npm]
 bun = true
 
-[env]
-SSH_AUTH_SOCK = "$HOME/.1password/agent.sock"
+# [env]
+# SSH_AUTH_SOCK = "$HOME/.1password/agent.sock"
 
 [tools]
 "aqua:go-task/task" = "latest"
+"npm:agent-browser" = "latest"
+1password = "latest"
+awscli = "latest"
 bun = "latest"
 envsubst = "latest"
 github-cli = "latest"
+go = "latest"
+goreleaser = "latest"
+jq = "latest"
+node = "25.6.1"
+opencode = "latest"
+terraform = "1.14.3"
 vault = "latest"
-"npm:agent-browser" = "latest"
