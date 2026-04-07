@@ -10,7 +10,7 @@ packages = ["default", "macos", "crc"]
 ".opencode/skills/mail" = "~/.opencode/skills/mail"
 ".opencode/skills/slack" = "~/.opencode/skills/slack"
 "Library/Application Support/com.mitchellh.ghostty/config.work" = "~/Library/Application Support/com.mitchellh.ghostty/config"
-"mise.work.toml" = "~/.mise.toml"
+"mise.work.toml" = "~/.config/mise/config.toml"
 "zshrc.work.zsh" = "~/.zshrc"
 
 [variables]
