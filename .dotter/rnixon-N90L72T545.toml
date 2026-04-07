@@ -1,8 +1,17 @@
 includes = []
-packages = ["default", "work", "macos", "crc"]
+packages = ["default", "macos", "crc"]
 
 [files]
+".docker/config.json" = "~/.docker/config.json"
+".opencode/commands/daily-routine.md" = "~/.opencode/commands/daily-routine.md"
+".opencode/commands/jira-sync.md" = "~/.opencode/commands/jira-sync.md"
+".opencode/skills/coder" = "~/.opencode/skills/coder"
+".opencode/skills/jira" = "~/.opencode/skills/jira"
+".opencode/skills/mail" = "~/.opencode/skills/mail"
+".opencode/skills/slack" = "~/.opencode/skills/slack"
 "Library/Application Support/com.mitchellh.ghostty/config.work" = "~/Library/Application Support/com.mitchellh.ghostty/config"
+"mise.work.toml" = "~/.mise.toml"
+"zshrc.work.zsh" = "~/.zshrc"
 
 [variables]
 email = "rnixon@hashicorp.com"

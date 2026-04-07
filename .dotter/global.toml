@@ -27,19 +27,6 @@ depends = ["default"]
 ".opencode/skills/dependabot-merger" = "~/.opencode/skills/dependabot-merger"
 zshrc = "~/.zshrc"
 
-[work]
-depends = ["default"]
-
-[work.files]
-".opencode/commands/daily-routine.md" = "~/.opencode/commands/daily-routine.md"
-".opencode/commands/jira-sync.md" = "~/.opencode/commands/jira-sync.md"
-".opencode/skills/coder" = "~/.opencode/skills/coder"
-".opencode/skills/jira" = "~/.opencode/skills/jira"
-".opencode/skills/mail" = "~/.opencode/skills/mail"
-".opencode/skills/slack" = "~/.opencode/skills/slack"
-"mise.work.toml" = "~/.mise.toml"
-"zshrc.work.zsh" = "~/.zshrc"
-
 [linux.files]
 ".config/ghostty/config" = "~/.config/ghostty/config"
 ".ssh/config" = "~/.ssh/config"
@@ -50,7 +37,6 @@ depends = ["default"]
 "Library/Scripts" = { target = "~/Library/Scripts", type = "template" }
 
 [crc]
-depends = ["work"]
 
 [crc.files]
 ".crc/crc.json" = "~/.crc/crc.json"
