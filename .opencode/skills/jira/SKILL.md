@@ -47,6 +47,8 @@ This identifier will roughly correspond to the current components available in t
 
 The content of a ticket should encourage the use of hyperlinks. Hyperlinks add context and quick references to where work needs to be performed. For example, if the ticket says something like "Update the documentation in the Coder repository" it should provide a hyperlink to the docs in the hashicorp/coder repository; in this case the URL would be https://github.com/hashicorp/coder/tree/main/docs.
 
+When creating tickets, prefer the Atlassian Document Format (ADF) when possible instead of raw Markdown. This should mitigate formatting issues in the Jira UI. You may still fall back upon Markdown if ADF is unable to be used.
+
 ### Ticket Type - Task
 
 ```
@@ -131,6 +133,12 @@ What are the major activities or deliverables?
 * How will success be measured?
 * What are the timeframes for achieving these goals?
 ```
+
+Epics require additional fields to be set. Default these to:
+- OKR (R&D): "Platform Experience"
+- Launch Event: "N/A"
+- Product: "Platform (IPS)"
+- Target Market Release: "N/A"
 
 ### Ticket Type - Idea
 
