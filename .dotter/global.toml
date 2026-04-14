@@ -29,9 +29,11 @@ zshrc = "~/.zshrc"
 
 [linux.files]
 ".config/ghostty/config" = "~/.config/ghostty/config"
+".local/share/fonts" = { target = "~/.local/share/fonts", type = "symbolic" }
 ".ssh/config" = "~/.ssh/config"
 
 [macos.files]
+".local/share/fonts" = { target = "~/Library/Fonts", type = "symbolic" }
 # Tuna does not support symlinked scripts
 # "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
 "Library/Scripts" = { target = "~/Library/Scripts", type = "template" }
