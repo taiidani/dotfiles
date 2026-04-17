@@ -65,6 +65,7 @@ export HOMEBREW_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
 # Added manually
 alias dc="docker compose"
 alias ls="ls --color=always"
+alias gsm="git switch main"
 
 # eval "$(tfcdev rc --no-export GITHUB_TOKEN,HOMEBREW_GITHUB_API_TOKEN)"
 
