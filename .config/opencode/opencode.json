@@ -1,20 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "ollama/gemma4",
-  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
-  "provider": {
-    "ollama": {
-      "models": {
-        "gemma4": {
-          "_launch": true,
-          "name": "gemma4"
-        }
-      },
-      "name": "Ollama",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "http://127.0.0.1:11434/v1"
-      }
-    }
-  }
+  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"]
 }
