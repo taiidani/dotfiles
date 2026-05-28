@@ -7,6 +7,13 @@ description: Instructions for accessing Jira via API calls in the terminal. This
 
 When accessing Jira, use the Atlassian CLI (`acli`). If `acli` is not available, fail immediately noting that it is required.
 
+## Operating Principles
+
+1. Tickets should default to the "Task" type and the "Pending Triage" (default) status.
+2. Ticket should always go into the FORGE Jira project.
+3. Prefer high signal for ticket contents. Hyperlink to reference material aggressively.
+4. When writing up a code change, include permalinks to relevant code snippets in GitHub.
+
 ## Common Commands
 
 - **View a ticket:** `acli jira workitem view KEY-123`
@@ -18,8 +25,6 @@ When accessing Jira, use the Atlassian CLI (`acli`). If `acli` is not available,
 Use `acli jira workitem --help` or append `--help` to any subcommand for additional options.
 
 ## Creating a Ticket
-
-Unless specifically told otherwise, all new tickets should be created in the FORGE Jira project using the "Needs More Info" status and assigned to me.
 
 Tickets should be of the "Task" ticket type by default.
 Other common types are "Bug" and "Epic" but should not be used unless specifically asked to.
@@ -41,6 +46,8 @@ This identifier will roughly correspond to the current components available in t
 - "tfcdev: Add new 'env' subcommand"
 
 The content of a ticket should encourage the use of hyperlinks. Hyperlinks add context and quick references to where work needs to be performed. For example, if the ticket says something like "Update the documentation in the Coder repository" it should provide a hyperlink to the docs in the hashicorp/coder repository; in this case the URL would be https://github.com/hashicorp/coder/tree/main/docs.
+
+When creating tickets, prefer the Atlassian Document Format (ADF) when possible instead of raw Markdown. This should mitigate formatting issues in the Jira UI. You may still fall back upon Markdown if ADF is unable to be used.
 
 ### Ticket Type - Task
 
@@ -126,6 +133,12 @@ What are the major activities or deliverables?
 * How will success be measured?
 * What are the timeframes for achieving these goals?
 ```
+
+Epics require additional fields to be set. Default these to:
+- OKR (R&D): "Platform Experience"
+- Launch Event: "N/A"
+- Product: "Platform (IPS)"
+- Target Market Release: "N/A"
 
 ### Ticket Type - Idea
 

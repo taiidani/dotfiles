@@ -45,7 +45,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Roam
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 
 # Mise
 eval "$(mise activate zsh)"
@@ -65,8 +65,9 @@ export HOMEBREW_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
 # Added manually
 alias dc="docker compose"
 alias ls="ls --color=always"
+alias gsm="git switch main"
 
-eval "$(tfcdev rc --no-export GITHUB_TOKEN,HOMEBREW_GITHUB_API_TOKEN)"
+# eval "$(tfcdev rc --no-export GITHUB_TOKEN,HOMEBREW_GITHUB_API_TOKEN)"
 
 # zprof
 

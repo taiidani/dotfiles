@@ -55,3 +55,5 @@ quick-terminal-size = 40%
 quick-terminal-autohide = true
 
 shell-integration-features = "ssh-env"
+
+font-family = "Monaspace Neon NF"

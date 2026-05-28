@@ -12,7 +12,6 @@ depends = []
 ".opencode/skills/go" = "~/.opencode/skills/go"
 ".opencode/skills/mise" = "~/.opencode/skills/mise"
 ".opencode/skills/obsidian" = "~/.opencode/skills/obsidian"
-"mise.toml" = "~/.config/mise/config.toml"
 gitconfig = "~/.gitconfig"
 
 [default.variables]
@@ -25,33 +24,21 @@ depends = ["default"]
 [home.files]
 ".claude/settings.local.json" = "~/.claude/settings.local.json"
 ".opencode/skills/dependabot-merger" = "~/.opencode/skills/dependabot-merger"
+"mise.toml" = "~/.config/mise/config.toml"
 zshrc = "~/.zshrc"
-
-[work]
-depends = ["default"]
-
-[work.files]
-".opencode/skills/coder" = "~/.opencode/skills/coder"
-".opencode/skills/daily-routine" = "~/.opencode/skills/daily-routine"
-".opencode/skills/jira" = "~/.opencode/skills/jira"
-".opencode/skills/mail" = "~/.opencode/skills/mail"
-".opencode/skills/slack" = "~/.opencode/skills/slack"
-"mise.work.toml" = "~/.mise.toml"
-"zshrc.work.zsh" = "~/.zshrc"
 
 [linux.files]
 ".config/ghostty/config" = "~/.config/ghostty/config"
+".local/share/fonts" = { target = "~/.local/share/fonts", type = "symbolic" }
 ".ssh/config" = "~/.ssh/config"
 
 [macos.files]
-"Library/Application Support/com.mitchellh.ghostty/config" = "~/Library/Application Support/com.mitchellh.ghostty/config"
-
+".local/share/fonts" = { target = "~/Library/Fonts", type = "symbolic" }
 # Tuna does not support symlinked scripts
 # "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
 "Library/Scripts" = { target = "~/Library/Scripts", type = "template" }
 
 [crc]
-depends = ["work"]
 
 [crc.files]
 ".crc/crc.json" = "~/.crc/crc.json"
