@@ -8,10 +8,10 @@ depends = []
 ".config/opencode/opencode.json" = "~/.config/opencode/opencode.json"
 ".opencode/commands" = "~/.opencode/commands"
 ".opencode/agents" = "~/.opencode/agents"
-".opencode/skills/gh-cli" = "~/.opencode/skills/gh-cli"
-".opencode/skills/go" = "~/.opencode/skills/go"
-".opencode/skills/mise" = "~/.opencode/skills/mise"
-".opencode/skills/obsidian" = "~/.opencode/skills/obsidian"
+".agents/skills/gh-cli" = "~/.agents/skills/gh-cli"
+".agents/skills/go" = "~/.agents/skills/go"
+".agents/skills/mise" = "~/.agents/skills/mise"
+".agents/skills/obsidian" = "~/.agents/skills/obsidian"
 gitconfig = "~/.gitconfig"
 
 [default.variables]
@@ -23,7 +23,6 @@ depends = ["default"]
 
 [home.files]
 ".claude/settings.local.json" = "~/.claude/settings.local.json"
-".opencode/skills/dependabot-merger" = "~/.opencode/skills/dependabot-merger"
 "mise.toml" = "~/.config/mise/config.toml"
 zshrc = "~/.zshrc"
 
