@@ -77,3 +77,7 @@ daily-routine() {
     opencode run "Start my /daily-routine"
     # --add-dir "/Users/rnixon/hashicorp" --add-dir "/dev/null" --add-dir "/tmp" --add-dir "/Users/rnixon/Library/Mobile Documents/iCloud~md~obsidian/" --add-dir "obsidian" --allow-all-tools
 }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/rnixon/.lmstudio/bin"
+# End of LM Studio CLI section

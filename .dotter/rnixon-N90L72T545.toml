@@ -10,6 +10,7 @@ packages = ["default", "macos", "crc"]
 ".agents/skills/mail" = "~/.agents/skills/mail"
 ".agents/skills/slack" = "~/.agents/skills/slack"
 "Library/Application Support/com.mitchellh.ghostty/config.work" = "~/Library/Application Support/com.mitchellh.ghostty/config"
+"Library/Application Support/espanso" = { target = "~/Library/Application Support/espanso", type = "symbolic" }
 "mise.work.toml" = "~/.config/mise/config.toml"
 "zshrc.work.zsh" = "~/.zshrc"
 
