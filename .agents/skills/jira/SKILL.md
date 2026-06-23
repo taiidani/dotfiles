@@ -1,6 +1,6 @@
 ---
 name: jira
-description: Instructions for accessing Jira via API calls in the terminal. This includes fetching and creating tickets, as well as best practices for handling credentials and security. This can be invoked to learn more about a ticket when I paste its URL or its ID (example FORGE-123) into a conversation or when I start a thread with "Please create a Jira ticket".
+description: Instructions for accessing Jira via API calls in the terminal. This includes fetching and creating tickets, as well as best practices for handling credentials and security. This can be invoked to learn more about a ticket when I paste its URL or its ID (example SAFETY-123) into a conversation or when I start a thread with "Please create a Jira ticket".
 ---
 
 # Jira API Access
@@ -10,15 +10,15 @@ When accessing Jira, use the Atlassian CLI (`acli`). If `acli` is not available,
 ## Operating Principles
 
 1. Tickets should default to the "Task" type and the "Pending Triage" (default) status.
-2. Ticket should always go into the FORGE Jira project.
+2. Ticket should always go into the SAFETY Jira project.
 3. Prefer high signal for ticket contents. Hyperlink to reference material aggressively.
 4. When writing up a code change, include permalinks to relevant code snippets in GitHub.
 
 ## Common Commands
 
 - **View a ticket:** `acli jira workitem view KEY-123`
-- **Search tickets:** `acli jira workitem search --jql "project = FORGE AND assignee = currentUser()"`
-- **Create a ticket:** `acli jira workitem create --project FORGE --type Task --summary "..." --description "..." --assignee 60870b7ff9def1006a84face`
+- **Search tickets:** `acli jira workitem search --jql "project = SAFETY AND assignee = currentUser()"`
+- **Create a ticket:** `acli jira workitem create --project SAFETY --type Task --summary "..." --description "..." --assignee 60870b7ff9def1006a84face`
 - **Edit a ticket:** `acli jira workitem edit KEY-123 --summary "..." --description "..."`
 - **Transition a ticket:** `acli jira workitem transition KEY-123`
 
@@ -39,7 +39,7 @@ Each ticket should follow the defined heading structures below and use the exist
 Do not modify the existing headings. Subheadings may be added beneath the existing headings to further clarify the content if needed.
 
 The "Summary" (title of the ticket) field should be prefixed with a short identifier representing the Product that the ticket falls under, followed by a colon.
-This identifier will roughly correspond to the current components available in the Forge Jira project. Some examples of good ticket titles:
+This identifier will roughly correspond to the current components available in the SAFETY Jira project. Some examples of good ticket titles:
 
 - "Coder: Address orphaned infrastructure"
 - "PRDE: Allow self-service destruction"
