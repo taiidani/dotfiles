@@ -50,6 +50,9 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # Mise
 eval "$(mise activate zsh)"
 
+# Fnox
+eval "$(fnox activate zsh)"
+
 # CRC
 # eval "$(crc podman-env)"
 # eval "$(crc oc-env)"
