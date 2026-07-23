@@ -51,7 +51,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 eval "$(mise activate zsh)"
 
 # Fnox
-eval "$(fnox activate zsh)"
+eval "$(mise exec -- fnox activate zsh)"
 
 # CRC
 # eval "$(crc podman-env)"
@@ -69,6 +69,7 @@ export HOMEBREW_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
 alias dc="docker compose"
 alias ls="ls --color=always"
 alias gsm="git switch main"
+alias bob="/Users/rnixon/.local/share/mise/installs/node/26.4.0/bin/bob"
 
 # eval "$(tfcdev rc --no-export GITHUB_TOKEN,HOMEBREW_GITHUB_API_TOKEN)"
 
