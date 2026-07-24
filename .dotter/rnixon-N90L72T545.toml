@@ -15,5 +15,5 @@ packages = ["default", "macos", "crc"]
 "zshrc.work.zsh" = "~/.zshrc"
 
 [variables]
-email = "rnixon@hashicorp.com"
+email = "ryan.nixon@ibm.com"
 zsh_addons_path = "/opt/homebrew/share"
