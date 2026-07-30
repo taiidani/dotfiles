@@ -23,7 +23,7 @@ depends = ["default"]
 
 [home.files]
 ".claude/settings.local.json" = "~/.claude/settings.local.json"
-"mise.toml" = "~/.config/mise/config.toml"
+"mise.toml" = { target = "~/.config/mise/config.toml", type = "symbolic" }
 zshrc = "~/.zshrc"
 
 [linux.files]
