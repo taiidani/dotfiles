@@ -17,4 +17,4 @@ jq = "latest"
 node = "25.6.1"
 terraform = "1.15.8"
 opencode = "latest"
-"http:miren" = { version="v0.12.1", url = 'https://api.miren.cloud/assets/release/miren/{{ version }}/miren-{{os(macos="darwin")}}-{{arch(x64="amd64")}}.tar.gz' }
+"github:psviderski/uncloud" = "latest"
