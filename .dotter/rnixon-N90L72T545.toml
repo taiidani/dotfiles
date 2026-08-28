@@ -1,5 +1,5 @@
 includes = []
-packages = ["default", "macos", "crc"]
+packages = ["default", "macos"]
 
 [files]
 ".docker/config.json" = "~/.docker/config.json"

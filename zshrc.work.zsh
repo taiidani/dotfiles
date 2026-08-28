@@ -53,10 +53,6 @@ eval "$(mise activate zsh)"
 # Fnox
 eval "$(mise exec -- fnox activate zsh)"
 
-# CRC
-# eval "$(crc podman-env)"
-# eval "$(crc oc-env)"
-
 # SW
 export GITHUB_TOKEN="$(mise exec -- gh auth token)"
 export HOMEBREW_GITHUB_API_TOKEN="${GITHUB_TOKEN}"

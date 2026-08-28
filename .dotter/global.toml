@@ -38,11 +38,5 @@ zshrc = "~/.zshrc"
 # "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
 "Library/Scripts" = { target = "~/Library/Scripts", type = "template" }
 
-[crc]
-
-[crc.files]
-".crc/crc.json" = "~/.crc/crc.json"
-".testcontainers.properties" = { target = "~/.testcontainers.properties", type = "symbolic" }
-
 [settings]
 default_target_type = "automatic"
