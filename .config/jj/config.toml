@@ -2,7 +2,7 @@
 
 [user]
 name = "Ryan Nixon"
-email = "{{email}}"
+email = "{{vars.email}}"
 
 [ui]
 editor = "zed --wait"

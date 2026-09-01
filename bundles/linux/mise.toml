@@ -1,0 +1,17 @@
+[vars]
+zsh_addons_path = "/usr/share/zsh/plugins"
+
+[dotfiles]
+"~/.config/ghostty/config" = "~/.dotfiles/.config/ghostty/config"
+"~/.local/share/fonts/Monaspace Argon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Argon", type = "symbolic" }
+"~/.local/share/fonts/Monaspace Krypton" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Krypton", type = "symbolic" }
+"~/.local/share/fonts/Monaspace Neon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Neon", type = "symbolic" }
+"~/.local/share/fonts/Monaspace Radon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Radon", type = "symbolic" }
+"~/.local/share/fonts/Monaspace Xenon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Xenon", type = "symbolic" }
+"~/.ssh/config" = "~/.dotfiles/.ssh/config"
+
+[bootstrap.packages]
+"brew:mise" = "latest"
+"brew:zsh-autosuggestions" = "latest"
+"brew:zsh-history-substring-search" = "latest"
+"brew:zsh-syntax-highlighting" = "latest"

@@ -1,0 +1,2 @@
+[bootstrap]
+config_roots = ["bundles/global", "bundles/macos", "bundles/home"]

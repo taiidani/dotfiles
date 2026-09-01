@@ -10,11 +10,11 @@ setopt hist_expire_dups_first
 HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|* --help)"
 
 # Fish-like syntax highlighting and autosuggestions
-source {{zsh_addons_path}}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source {{zsh_addons_path}}/zsh-autosuggestions/zsh-autosuggestions.zsh
+source {{vars.zsh_addons_path}}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source {{vars.zsh_addons_path}}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Use history substring search
-source {{zsh_addons_path}}/zsh-history-substring-search/zsh-history-substring-search.zsh
+source {{vars.zsh_addons_path}}/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey "\e[A" history-substring-search-up
 bindkey "\e[B" history-substring-search-down
 

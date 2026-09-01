@@ -1,0 +1,26 @@
+[dotfiles]
+"~/.docker/config.json" = "~/.dotfiles/.docker/config.json"
+"~/.agents/skills/coder" = "~/.dotfiles/.agents/skills/coder"
+"~/.agents/skills/jira" = "~/.dotfiles/.agents/skills/jira"
+"~/.agents/skills/mail" = "~/.dotfiles/.agents/skills/mail"
+"~/.agents/skills/slack" = "~/.dotfiles/.agents/skills/slack"
+"~/Library/Application Support/com.mitchellh.ghostty/config" = "~/.dotfiles/Library/Application Support/com.mitchellh.ghostty/config.work"
+"~/Library/Application Support/espanso" = { source = "~/.dotfiles/Library/Application Support/espanso", type = "symbolic" }
+"~/.config/mise/config.toml" = "~/.dotfiles/.config/mise/config.work.toml"
+"~/.zshrc" = { source = "~/.dotfiles/zshrc.work.zsh", mode = "template" }
+
+[bootstrap.packages]
+"brew:docker" = "latest"
+"brew:mise" = "latest"
+"brew:docker-buildx" = "latest"
+"brew:docker-completion" = "latest"
+"brew:docker-compose" = "latest"
+"brew:zsh-autosuggestions" = "latest"
+"brew:zsh-history-substring-search" = "latest"
+"brew:zsh-syntax-highlighting" = "latest"
+"brew-cask:1password" = "latest"
+"brew-cask:espanso" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:lm-studio" = "latest"
+"brew-cask:tuna" = "latest"
+"brew-cask:zed" = "latest"

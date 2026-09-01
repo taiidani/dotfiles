@@ -1,0 +1,11 @@
+[dotfiles]
+"~/.config/git/excludes" = "~/.dotfiles/.config/git/excludes"
+"~/.config/jj/config.toml" = { source = "~/.dotfiles/.config/jj/config.toml", mode = "template" }
+"~/.config/opencode/opencode.json" = "~/.dotfiles/.config/opencode/opencode.json"
+"~/.opencode/commands" = "~/.dotfiles/.opencode/commands"
+"~/.opencode/agents" = "~/.dotfiles/.opencode/agents"
+"~/.agents/skills/gh-cli" = "~/.dotfiles/.agents/skills/gh-cli"
+"~/.agents/skills/go" = "~/.dotfiles/.agents/skills/go"
+"~/.agents/skills/mise" = "~/.dotfiles/.agents/skills/mise"
+"~/.agents/skills/obsidian" = "~/.dotfiles/.agents/skills/obsidian"
+"~/.gitconfig" = { source = "~/.dotfiles/gitconfig", mode = "template" }
