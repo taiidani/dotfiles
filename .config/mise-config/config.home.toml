@@ -1,12 +1,6 @@
 [settings]
 env_shell_expand = true
 
-[vars]
-email = "r.taiidani@gmail.com"
-
-[dotfiles]
-"~/.gitconfig" = { source = "~/.dotfiles/gitconfig", mode = "template" }
-
 [env]
 EDITOR = "nano"
 SSH_AUTH_SOCK = "$HOME/.1password/agent.sock"

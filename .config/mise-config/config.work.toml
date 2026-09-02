@@ -3,10 +3,6 @@ experimental = true
 env_shell_expand = true
 idiomatic_version_file_enable_tools = ["ruby"]
 
-[vars]
-email = "ryan.nixon@ibm.com"
-zsh_addons_path = "/opt/homebrew/share"
-
 [settings.npm]
 bun = true
 

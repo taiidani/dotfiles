@@ -1,2 +1,37 @@
+[vars]
+email = "r.taiidani@gmail.com"
+zsh_addons_path = "/opt/homebrew/share"
+
 [bootstrap]
-config_roots = ["bundles/global", "bundles/macos", "bundles/home"]
+config_roots = ["bundles/global", "bundles/macos"]
+
+[dotfiles]
+"~/.config/mise/config.toml" = "~/.dotfiles/.config/mise-config/config.toml"
+"~/.zshrc" = "~/.dotfiles/zshrc"
+"~/Library/Application Support/com.mitchellh.ghostty/config" = "~/.dotfiles/Library/Application Support/com.mitchellh.ghostty/config"
+
+[bootstrap.packages]
+"brew:mise" = "latest"
+"brew:zsh-autosuggestions" = "latest"
+"brew:zsh-history-substring-search" = "latest"
+"brew:zsh-syntax-highlighting" = "latest"
+"brew-cask:1password" = "latest"
+"brew-cask:discord" = "latest"
+"brew-cask:espanso" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:obsidian" = "latest"
+"brew-cask:orbstack" = "latest"
+"brew-cask:signal" = "latest"
+"brew-cask:slack" = "latest"
+"brew-cask:transmit" = "latest"
+"brew-cask:tuna" = "latest"
+"brew-cask:zed" = "latest"
+
+[bootstrap.macos.finder]
+show_pathbar = true
+
+[bootstrap.macos.trackpad]
+tap_to_click = true
+
+[bootstrap.macos.defaults]
+"com.apple.finder" = { AppleShowAllFiles = true }

@@ -1,6 +1,3 @@
-[vars]
-zsh_addons_path = "/opt/homebrew/share"
-
 [dotfiles]
 "~/Library/Fonts/Monaspace Argon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Argon", type = "symbolic" }
 "~/Library/Fonts/Monaspace Krypton" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Krypton", type = "symbolic" }
@@ -10,13 +7,3 @@ zsh_addons_path = "/opt/homebrew/share"
 # Tuna does not support symlinked scripts
 # "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
 # "~/Library/Scripts" = { source = "~/.dotfiles/Library/Scripts", type = "template" }
-
-
-[bootstrap.macos.finder]
-show_pathbar = true
-
-[bootstrap.macos.trackpad]
-tap_to_click = true
-
-[bootstrap.macos.defaults]
-"com.apple.finder" = { AppleShowAllFiles = true }
