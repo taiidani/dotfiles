@@ -1,0 +1,34 @@
+[vars]
+email = "r.taiidani@gmail.com"
+zsh_addons_path = "/usr/share/zsh/plugins"
+
+[bootstrap]
+config_roots = ["bundles/global", "bundles/linux"]
+
+[dotfiles]
+"~/.config/mise/config.toml" = "~/.dotfiles/.config/mise-config/config.home.toml"
+"~/.zshrc" = "~/.dotfiles/zshrc"
+"~/.config/uncloud/config.yaml" = "~/.dotfiles/.config/uncloud/config.yaml"
+
+[bootstrap.packages]
+"pacman:1password" = "latest"
+"pacman:1password-cli" = "latest"
+"pacman:docker" = "latest"
+"pacman:docker-buildx" = "latest"
+"pacman:docker-compose" = "latest"
+"pacman:ghostty" = "latest"
+"pacman:mise" = "latest"
+"pacman:obsidian" = "latest"
+"pacman:oh-my-zsh-git" = "latest"
+"pacman:steam" = "latest"
+"pacman:tailscale" = "latest"
+"pacman:yay" = "latest"
+"pacman:zsh" = "latest"
+"pacman:zsh-autosuggestions" = "latest"
+"pacman:zsh-syntax-highlighting" = "latest"
+"pacman:zsh-history-substring-search" = "latest"
+"pacman:zsh-theme-powerlevel10k" = "latest"
+"pacman:zed" = "latest"
+
+[bootstrap.user]
+login_shell = "/usr/bin/zsh"

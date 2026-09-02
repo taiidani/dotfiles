@@ -1,0 +1,8 @@
+current_context: default
+contexts:
+  default:
+    connections:
+      - ssh: root@192.168.102.80
+        machine_id: 1360781f843e388e5bcefc05a6647f99
+      - ssh: root@192.168.102.42
+        machine_id: 25de7a802ee0860ef159724538c32f92
