@@ -3,12 +3,7 @@ email = "r.taiidani@gmail.com"
 zsh_addons_path = "/usr/share/zsh/plugins"
 
 [bootstrap]
-config_roots = ["bundles/global", "bundles/linux"]
-
-[dotfiles]
-"~/.config/mise/config.toml" = ".config/mise-config/config.home.toml"
-"~/.zshrc" = "zshrc"
-"~/.config/uncloud/config.yaml" = ".config/uncloud/config.yaml"
+config_roots = ["bundles/global", "bundles/linux", "bundles/personal"]
 
 [bootstrap.packages]
 "pacman:1password" = "latest"

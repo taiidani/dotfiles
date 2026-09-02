@@ -1,0 +1,3 @@
+[dotfiles]
+"~/.config/mise/config.toml" = ".config/mise-config/config.toml"
+"~/.zshrc" = "zshrc"

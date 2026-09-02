@@ -3,12 +3,7 @@ email = "r.taiidani@gmail.com"
 zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap]
-config_roots = ["bundles/global", "bundles/macos"]
-
-[dotfiles]
-"~/.config/mise/config.toml" = ".config/mise-config/config.toml"
-"~/.zshrc" = "zshrc"
-"~/Library/Application Support/com.mitchellh.ghostty/config" = "Library/Application Support/com.mitchellh.ghostty/config"
+config_roots = ["bundles/global", "bundles/macos", "bundles/personal"]
 
 [bootstrap.packages]
 "brew:mise" = "latest"
