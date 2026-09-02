@@ -1,9 +1,9 @@
 [dotfiles]
-"~/Library/Fonts/Monaspace Argon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Argon", type = "symbolic" }
-"~/Library/Fonts/Monaspace Krypton" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Krypton", type = "symbolic" }
-"~/Library/Fonts/Monaspace Neon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Neon", type = "symbolic" }
-"~/Library/Fonts/Monaspace Radon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Radon", type = "symbolic" }
-"~/Library/Fonts/Monaspace Xenon" = { source = "~/.dotfiles/.local/share/fonts/Monaspace Xenon", type = "symbolic" }
+"~/Library/Fonts/Monaspace Argon" = { source = "../../fonts/Monaspace Argon", type = "symbolic" }
+"~/Library/Fonts/Monaspace Krypton" = { source = "../../fonts/Monaspace Krypton", type = "symbolic" }
+"~/Library/Fonts/Monaspace Neon" = { source = "../../fonts/Monaspace Neon", type = "symbolic" }
+"~/Library/Fonts/Monaspace Radon" = { source = "../../fonts/Monaspace Radon", type = "symbolic" }
+"~/Library/Fonts/Monaspace Xenon" = { source = "../../fonts/Monaspace Xenon", type = "symbolic" }
 # Tuna does not support symlinked scripts
 # "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
-# "~/Library/Scripts" = { source = "~/.dotfiles/Library/Scripts", type = "template" }
+# "~/Library/Scripts" = { source = "Library/Scripts", type = "template" }

@@ -6,9 +6,9 @@ zsh_addons_path = "/usr/share/zsh/plugins"
 config_roots = ["bundles/global", "bundles/linux"]
 
 [dotfiles]
-"~/.config/mise/config.toml" = "~/.dotfiles/.config/mise-config/config.home.toml"
-"~/.zshrc" = "~/.dotfiles/zshrc"
-"~/.config/uncloud/config.yaml" = "~/.dotfiles/.config/uncloud/config.yaml"
+"~/.config/mise/config.toml" = ".config/mise-config/config.home.toml"
+"~/.zshrc" = "zshrc"
+"~/.config/uncloud/config.yaml" = ".config/uncloud/config.yaml"
 
 [bootstrap.packages]
 "pacman:1password" = "latest"

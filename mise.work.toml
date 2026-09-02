@@ -6,15 +6,15 @@ zsh_addons_path = "/opt/homebrew/share"
 config_roots = ["bundles/global", "bundles/macos"]
 
 [dotfiles]
-"~/.docker/config.json" = "~/.dotfiles/.docker/config.json"
-"~/.agents/skills/coder" = "~/.dotfiles/.agents/skills/coder"
-"~/.agents/skills/jira" = "~/.dotfiles/.agents/skills/jira"
-"~/.agents/skills/mail" = "~/.dotfiles/.agents/skills/mail"
-"~/.agents/skills/slack" = "~/.dotfiles/.agents/skills/slack"
-"~/Library/Application Support/com.mitchellh.ghostty/config" = "~/.dotfiles/Library/Application Support/com.mitchellh.ghostty/config.work"
-"~/Library/Application Support/espanso" = { source = "~/.dotfiles/Library/Application Support/espanso", type = "symbolic" }
-"~/.config/mise/config.toml" = "~/.dotfiles/.config/mise-config/config.work.toml"
-"~/.zshrc" = { source = "~/.dotfiles/zshrc.work.zsh", mode = "template" }
+"~/.docker/config.json" = ".docker/config.json"
+"~/.agents/skills/coder" = ".agents/skills/coder"
+"~/.agents/skills/jira" = ".agents/skills/jira"
+"~/.agents/skills/mail" = ".agents/skills/mail"
+"~/.agents/skills/slack" = ".agents/skills/slack"
+"~/Library/Application Support/com.mitchellh.ghostty/config" = "Library/Application Support/com.mitchellh.ghostty/config.work"
+"~/Library/Application Support/espanso" = { source = "Library/Application Support/espanso", type = "symbolic" }
+"~/.config/mise/config.toml" = ".config/mise-config/config.work.toml"
+"~/.zshrc" = { source = "zshrc.work.zsh", mode = "template" }
 
 [bootstrap.packages]
 "brew:docker" = "latest"
