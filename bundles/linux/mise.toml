@@ -1,5 +1,5 @@
 [dotfiles]
-"~/.config/ghostty/config" = ".config/ghostty/config"
+"~/.config/ghostty/config" = "../../.config/ghostty/config"
 "~/.config/uncloud/config.yaml" = ".config/uncloud/config.yaml"
 "~/.local/share/fonts/Monaspace Argon" = { source = "../../fonts/Monaspace Argon", type = "symbolic" }
 "~/.local/share/fonts/Monaspace Krypton" = { source = "../../fonts/Monaspace Krypton", type = "symbolic" }
