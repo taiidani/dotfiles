@@ -44,14 +44,14 @@ autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# Roam
-# eval "$(direnv hook zsh)"
-
 # Mise
 eval "$(mise activate zsh)"
 
 # Fnox
 eval "$(mise exec -- fnox activate zsh)"
+
+# jj
+source <(COMPLETE=zsh jj)
 
 # SW
 export GITHUB_TOKEN="$(mise exec -- gh auth token)"
