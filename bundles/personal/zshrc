@@ -47,6 +47,9 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # Mise
 eval "$(mise activate zsh)"
 
+# jj
+source <(COMPLETE=zsh jj)
+
 # GitHub
 export GITHUB_TOKEN="$(gh auth token)"
 export PATH="$HOME/.local/bin:$PATH"
