@@ -27,3 +27,6 @@ config_roots = ["bundles/global", "bundles/linux", "bundles/personal"]
 
 [bootstrap.user]
 login_shell = "/usr/bin/zsh"
+
+[dotfiles]
+"~/.zshrc/zeditor" = { line = "alias zed=zeditor" }
