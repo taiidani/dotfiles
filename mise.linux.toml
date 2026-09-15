@@ -1,5 +1,6 @@
 [vars]
 email = "r.taiidani@gmail.com"
+zed = "zeditor"
 zsh_addons_path = "/usr/share/zsh/plugins"
 
 [bootstrap]

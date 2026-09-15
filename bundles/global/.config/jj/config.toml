@@ -5,7 +5,7 @@ name = "Ryan Nixon"
 email = "{{vars.email}}"
 
 [ui]
-editor = "zed --wait"
+editor = "{{vars.zed}} --wait"
 
 [signing]
 behavior = "own"

@@ -1,5 +1,6 @@
 [vars]
 email = "r.taiidani@gmail.com"
+zed = "zed"
 zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap]

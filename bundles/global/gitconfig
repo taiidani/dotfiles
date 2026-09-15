@@ -13,7 +13,7 @@
 [gpg]
 	format = ssh
 [core]
-	editor = zed --wait
+	editor = {{vars.zed}} --wait
 	excludesFile = ~/.config/git/excludes
 [init]
 	defaultBranch = main
