@@ -19,7 +19,6 @@ config_roots = ["bundles/global", "bundles/macos", "bundles/work"]
 "brew-cask:espanso" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:lm-studio" = "latest"
-"brew-cask:tuna" = "latest"
 "brew-cask:zed" = "latest"
 
 [bootstrap.macos.finder]

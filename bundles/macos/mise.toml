@@ -4,6 +4,3 @@
 "~/Library/Fonts/Monaspace Neon" = { source = "../../fonts/Monaspace Neon", type = "symbolic" }
 "~/Library/Fonts/Monaspace Radon" = { source = "../../fonts/Monaspace Radon", type = "symbolic" }
 "~/Library/Fonts/Monaspace Xenon" = { source = "../../fonts/Monaspace Xenon", type = "symbolic" }
-# Tuna does not support symlinked scripts
-# "Library/Application Support/Tuna/config.toml" = { target = "~/Library/Application Support/Tuna/config.toml", type = "symbolic" }
-# "~/Library/Scripts" = { source = "Library/Scripts", type = "template" }

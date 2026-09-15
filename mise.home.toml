@@ -20,7 +20,6 @@ config_roots = ["bundles/global", "bundles/macos", "bundles/personal"]
 "brew-cask:signal" = "latest"
 "brew-cask:slack" = "latest"
 "brew-cask:transmit" = "latest"
-"brew-cask:tuna" = "latest"
 "brew-cask:zed" = "latest"
 
 [bootstrap.macos.finder]
