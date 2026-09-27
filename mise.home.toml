@@ -3,9 +3,6 @@ email = "r.taiidani@gmail.com"
 zed = "zed"
 zsh_addons_path = "/opt/homebrew/share"
 
-[bootstrap]
-config_roots = ["bundles/global"]
-
 [bootstrap.packages]
 "brew-cask:discord" = "latest"
 "brew-cask:obsidian" = "latest"

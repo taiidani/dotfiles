@@ -3,9 +3,6 @@ email = "r.taiidani@gmail.com"
 zed = "zeditor"
 zsh_addons_path = "/usr/share/zsh/plugins"
 
-[bootstrap]
-config_roots = ["bundles/global"]
-
 [bootstrap.packages]
 "pacman:obsidian" = "latest"
 "pacman:steam" = "latest"

@@ -1,0 +1,4 @@
+[dotfiles]
+"~/.config/opencode/opencode.json" = "opencode.json"
+"~/.opencode/commands" = "commands"
+"~/.opencode/agents" = "agents"
