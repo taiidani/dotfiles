@@ -1,0 +1,2 @@
+[dotfiles]
+"~/.config/jj/config.toml" = { source = "config.toml", mode = "template" }
