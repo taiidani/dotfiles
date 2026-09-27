@@ -1,0 +1,5 @@
+[dotfiles]
+"~/.agents/skills/coder" = "coder"
+"~/.agents/skills/jira" = "jira"
+"~/.agents/skills/mail" = "mail"
+"~/.agents/skills/slack" = "slack"
