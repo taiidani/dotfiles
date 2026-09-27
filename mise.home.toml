@@ -4,7 +4,7 @@ zed = "zed"
 zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap]
-config_roots = ["bundles/global", "bundles/macos", "bundles/personal"]
+config_roots = ["bundles/global", "bundles/personal"]
 
 [bootstrap.packages]
 "brew:mise" = "latest"

@@ -1,6 +1,0 @@
-[dotfiles]
-"~/Library/Fonts/Monaspace Argon" = { source = "../../fonts/Monaspace Argon", type = "symbolic" }
-"~/Library/Fonts/Monaspace Krypton" = { source = "../../fonts/Monaspace Krypton", type = "symbolic" }
-"~/Library/Fonts/Monaspace Neon" = { source = "../../fonts/Monaspace Neon", type = "symbolic" }
-"~/Library/Fonts/Monaspace Radon" = { source = "../../fonts/Monaspace Radon", type = "symbolic" }
-"~/Library/Fonts/Monaspace Xenon" = { source = "../../fonts/Monaspace Xenon", type = "symbolic" }

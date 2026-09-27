@@ -4,7 +4,7 @@ zed = "zed"
 zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap]
-config_roots = ["bundles/global", "bundles/macos", "bundles/work"]
+config_roots = ["bundles/global", "bundles/work"]
 
 [bootstrap.packages]
 "brew:docker" = "latest"
