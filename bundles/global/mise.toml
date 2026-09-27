@@ -1,7 +1,5 @@
 [dotfiles]
-"~/.config/git/excludes" = ".config/git/excludes"
 "~/.config/jj/config.toml" = { source = ".config/jj/config.toml", mode = "template" }
 "~/.config/opencode/opencode.json" = ".config/opencode/opencode.json"
 "~/.opencode/commands" = ".opencode/commands"
 "~/.opencode/agents" = ".opencode/agents"
-"~/.gitconfig" = { source = "gitconfig", mode = "template" }

@@ -1,0 +1,3 @@
+[dotfiles]
+"~/.config/git/excludes" = "excludes"
+"~/.gitconfig" = { source = "gitconfig", mode = "template" }
