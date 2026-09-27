@@ -30,4 +30,5 @@ config_roots = ["bundles/global", "bundles/linux", "bundles/personal"]
 login_shell = "/usr/bin/zsh"
 
 [dotfiles]
+"~/.agents/skills/review" = "global/.agents/skills/review"
 "~/.zshrc/zeditor" = { line = "alias zed=zeditor" }
