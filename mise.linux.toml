@@ -13,19 +13,7 @@ config_roots = ["bundles/global", "bundles/personal"]
 "pacman:ghostty" = "latest"
 "pacman:mise" = "latest"
 "pacman:obsidian" = "latest"
-"pacman:oh-my-zsh-git" = "latest"
 "pacman:steam" = "latest"
 "pacman:tailscale" = "latest"
 "pacman:yay" = "latest"
-"pacman:zsh" = "latest"
-"pacman:zsh-autosuggestions" = "latest"
-"pacman:zsh-syntax-highlighting" = "latest"
-"pacman:zsh-history-substring-search" = "latest"
-"pacman:zsh-theme-powerlevel10k" = "latest"
 "pacman:zed" = "latest"
-
-[bootstrap.user]
-login_shell = "/usr/bin/zsh"
-
-[dotfiles]
-"~/.zshrc/zeditor" = { line = "alias zed=zeditor" }

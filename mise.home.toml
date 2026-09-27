@@ -8,9 +8,6 @@ config_roots = ["bundles/global", "bundles/personal"]
 
 [bootstrap.packages]
 "brew:mise" = "latest"
-"brew:zsh-autosuggestions" = "latest"
-"brew:zsh-history-substring-search" = "latest"
-"brew:zsh-syntax-highlighting" = "latest"
 "brew-cask:discord" = "latest"
 "brew-cask:espanso" = "latest"
 "brew-cask:ghostty" = "latest"

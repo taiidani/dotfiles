@@ -1,0 +1,14 @@
+[bootstrap.packages]
+"pacman:oh-my-zsh-git" = "latest"
+"pacman:zsh" = "latest"
+"pacman:zsh-autosuggestions" = "latest"
+"pacman:zsh-syntax-highlighting" = "latest"
+"pacman:zsh-history-substring-search" = "latest"
+"pacman:zsh-theme-powerlevel10k" = "latest"
+
+[bootstrap.user]
+login_shell = "/usr/bin/zsh"
+
+[dotfiles]
+"~/.zshrc" = { source = "personal/zshrc", mode = "template" }
+"~/.zshrc/zeditor" = { line = "alias zed=zeditor" }
