@@ -1,8 +1,11 @@
-# keybind = global:cmd+grave_accent=toggle_quick_terminal
+# keybind = global:cmd+space=toggle_quick_terminal
 # keybind = global:option+space=toggle_quick_terminal
+# keybind = global:super+space=toggle_quick_terminal
+
 quick-terminal-screen = mouse
 quick-terminal-position = top
-# quick-terminal-size = "50%"
+quick-terminal-size = "50%"
+quick-terminal-autohide = false
 
 shell-integration-features = "ssh-env"
 

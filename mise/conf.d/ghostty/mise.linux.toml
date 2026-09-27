@@ -2,4 +2,4 @@
 "pacman:ghostty" = "latest"
 
 [dotfiles]
-"~/.config/ghostty/config" = "config"
+"~/.config/ghostty/config" = "home/config"
