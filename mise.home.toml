@@ -30,6 +30,3 @@ tap_to_click = true
 
 [bootstrap.macos.defaults]
 "com.apple.finder" = { AppleShowAllFiles = true }
-
-[dotfiles]
-"~/.agents/skills/review" = "global/.agents/skills/review"

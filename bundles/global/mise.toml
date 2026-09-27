@@ -4,8 +4,4 @@
 "~/.config/opencode/opencode.json" = ".config/opencode/opencode.json"
 "~/.opencode/commands" = ".opencode/commands"
 "~/.opencode/agents" = ".opencode/agents"
-"~/.agents/skills/gh-cli" = ".agents/skills/gh-cli"
-"~/.agents/skills/go" = ".agents/skills/go"
-"~/.agents/skills/mise" = ".agents/skills/mise"
-"~/.agents/skills/obsidian" = ".agents/skills/obsidian"
 "~/.gitconfig" = { source = "gitconfig", mode = "template" }
