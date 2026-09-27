@@ -1,3 +1,0 @@
-[dotfiles]
-"~/.config/ghostty/config" = "../../.config/ghostty/config"
-"~/.ssh/config" = ".ssh/config"

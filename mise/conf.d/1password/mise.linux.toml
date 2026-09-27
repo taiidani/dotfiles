@@ -1,0 +1,6 @@
+[dotfiles]
+"~/.ssh/config" = ".ssh/config"
+
+[bootstrap.packages]
+"pacman:1password" = "latest"
+"pacman:1password-cli" = "latest"

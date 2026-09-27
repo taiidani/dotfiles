@@ -4,11 +4,9 @@ zed = "zeditor"
 zsh_addons_path = "/usr/share/zsh/plugins"
 
 [bootstrap]
-config_roots = ["bundles/global", "bundles/linux", "bundles/personal"]
+config_roots = ["bundles/global", "bundles/personal"]
 
 [bootstrap.packages]
-"pacman:1password" = "latest"
-"pacman:1password-cli" = "latest"
 "pacman:docker" = "latest"
 "pacman:docker-buildx" = "latest"
 "pacman:docker-compose" = "latest"
