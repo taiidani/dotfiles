@@ -1,0 +1,4 @@
+[bootstrap.packages]
+"pacman:docker" = "latest"
+"pacman:docker-buildx" = "latest"
+"pacman:docker-compose" = "latest"

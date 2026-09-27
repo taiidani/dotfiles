@@ -1,3 +1,2 @@
 [dotfiles]
-"~/.docker/config.json" = ".docker/config.json"
 "~/Library/Application Support/espanso" = { source = "Library/Application Support/espanso", type = "symbolic" }

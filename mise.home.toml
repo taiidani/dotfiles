@@ -10,7 +10,6 @@ config_roots = ["bundles/global"]
 "brew-cask:discord" = "latest"
 "brew-cask:espanso" = "latest"
 "brew-cask:obsidian" = "latest"
-"brew-cask:orbstack" = "latest"
 "brew-cask:signal" = "latest"
 "brew-cask:slack" = "latest"
 "brew-cask:transmit" = "latest"

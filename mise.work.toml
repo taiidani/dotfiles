@@ -7,10 +7,6 @@ zsh_addons_path = "/opt/homebrew/share"
 config_roots = ["bundles/global", "bundles/work"]
 
 [bootstrap.packages]
-"brew:docker" = "latest"
-"brew:docker-buildx" = "latest"
-"brew:docker-completion" = "latest"
-"brew:docker-compose" = "latest"
 "brew-cask:espanso" = "latest"
 "brew-cask:lm-studio" = "latest"
 "brew-cask:zed" = "latest"
