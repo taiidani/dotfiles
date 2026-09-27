@@ -1,4 +1,3 @@
 [dotfiles]
 "~/.config/ghostty/config" = "../../.config/ghostty/config"
-"~/.config/uncloud/config.yaml" = ".config/uncloud/config.yaml"
 "~/.ssh/config" = ".ssh/config"
