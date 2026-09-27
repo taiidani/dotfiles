@@ -1,2 +1,0 @@
-[dotfiles]
-"~/Library/Application Support/espanso" = { source = "Library/Application Support/espanso", type = "symbolic" }

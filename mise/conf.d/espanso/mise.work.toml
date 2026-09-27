@@ -1,0 +1,5 @@
+[bootstrap.packages]
+"brew-cask:espanso" = "latest"
+
+[dotfiles]
+"~/Library/Application Support/espanso" = { source = "work", type = "symbolic" }

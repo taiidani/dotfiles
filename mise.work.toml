@@ -4,10 +4,9 @@ zed = "zed"
 zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap]
-config_roots = ["bundles/global", "bundles/work"]
+config_roots = ["bundles/global"]
 
 [bootstrap.packages]
-"brew-cask:espanso" = "latest"
 "brew-cask:lm-studio" = "latest"
 "brew-cask:zed" = "latest"
 
