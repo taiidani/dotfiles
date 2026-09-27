@@ -4,10 +4,9 @@ zed = "zed"
 zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap]
-config_roots = ["bundles/global", "bundles/personal"]
+config_roots = ["bundles/global"]
 
 [bootstrap.packages]
-"brew:mise" = "latest"
 "brew-cask:discord" = "latest"
 "brew-cask:espanso" = "latest"
 "brew-cask:obsidian" = "latest"

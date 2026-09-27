@@ -8,7 +8,6 @@ config_roots = ["bundles/global", "bundles/work"]
 
 [bootstrap.packages]
 "brew:docker" = "latest"
-"brew:mise" = "latest"
 "brew:docker-buildx" = "latest"
 "brew:docker-completion" = "latest"
 "brew:docker-compose" = "latest"
