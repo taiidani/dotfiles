@@ -1,2 +1,5 @@
+[bootstrap.packages]
+"pacman:ghostty" = "latest"
+
 [dotfiles]
 "~/.config/ghostty/config" = "config"

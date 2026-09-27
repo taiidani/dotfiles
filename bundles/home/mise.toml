@@ -1,3 +1,2 @@
 [dotfiles]
 "~/.config/mise/config.toml" = ".config/mise-config/config.toml"
-"~/Library/Application Support/com.mitchellh.ghostty/config" = "Library/Application Support/com.mitchellh.ghostty/config"

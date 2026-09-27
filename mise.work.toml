@@ -13,7 +13,6 @@ config_roots = ["bundles/global", "bundles/work"]
 "brew:docker-completion" = "latest"
 "brew:docker-compose" = "latest"
 "brew-cask:espanso" = "latest"
-"brew-cask:ghostty" = "latest"
 "brew-cask:lm-studio" = "latest"
 "brew-cask:zed" = "latest"
 

@@ -1,0 +1,5 @@
+[bootstrap.packages]
+"brew-cask:ghostty" = "latest"
+
+[dotfiles]
+"~/Library/Application Support/com.mitchellh.ghostty/config" = "work/config"

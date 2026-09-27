@@ -10,7 +10,6 @@ config_roots = ["bundles/global", "bundles/personal"]
 "pacman:docker" = "latest"
 "pacman:docker-buildx" = "latest"
 "pacman:docker-compose" = "latest"
-"pacman:ghostty" = "latest"
 "pacman:mise" = "latest"
 "pacman:obsidian" = "latest"
 "pacman:steam" = "latest"
