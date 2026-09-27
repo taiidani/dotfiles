@@ -11,4 +11,3 @@ login_shell = "/usr/bin/zsh"
 
 [dotfiles]
 "~/.zshrc" = { source = "personal/zshrc", mode = "template" }
-"~/.zshrc/zeditor" = { line = "alias zed=zeditor" }

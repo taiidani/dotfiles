@@ -44,6 +44,9 @@ autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+# Generalize zed location
+alias zed="{{vars.zed}}"
+
 # Mise
 eval "$(mise activate zsh)"
 
