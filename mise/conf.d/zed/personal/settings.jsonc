@@ -7,10 +7,30 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato",
+  },
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+    "dark": "Catppuccin Macchiato"
+  },
+  "buffer_font_family": "Monaspace Neon NF",
+  "terminal": {
+    "font_family": "Monaspace Neon NF",
+  },
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "dockerfile": true,
+    "html": true,
+    "proto": true,
+    "sql": true,
+    "swift": true,
+    "terraform": true,
+    "toml": true,
   },
   "diff_view_style": "split",
   "cli_default_open_behavior": "existing_window",
@@ -25,10 +45,6 @@
   },
   "git_panel": {
     "dock": "right"
-  },
-  "buffer_font_family": "Monaspace Neon NF",
-  "terminal": {
-    "font_family": "Monaspace Neon NF",
   },
   "agent_servers": {
     "claude-acp": {
@@ -112,27 +128,15 @@
     "favorite_models": [
       {
         "provider": "copilot_chat",
-        "model": "claude-opus-4.6",
-        "enable_thinking": true,
-        "effort": "high"
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "gpt-5.4",
-        "enable_thinking": false,
-        "effort": "high"
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "claude-opus-4.8",
-        "enable_thinking": true,
-        "effort": "high"
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "claude-sonnet-5",
+        "model": "claude-sonnet-5.5",
         "enable_thinking": true,
         "effort": "medium"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-5.5",
+        "enable_thinking": true,
+        "effort": "high"
       },
       {
         "provider": "openrouter",
@@ -199,10 +203,5 @@
     }
   ],
   "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Ayu Dark",
-  },
+  "buffer_font_size": 15
 }
