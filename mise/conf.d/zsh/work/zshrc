@@ -45,6 +45,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Mise
+export PATH="$HOME/.local/bin:$PATH"
 eval "$(mise activate zsh)"
 
 # Fnox

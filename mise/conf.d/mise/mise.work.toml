@@ -1,5 +1,5 @@
 [bootstrap.packages]
-"brew:mise" = "latest"
+# "brew:mise" = "latest"
 
 [dotfiles]
 "~/.config/mise/config.toml" = "work/config.toml"

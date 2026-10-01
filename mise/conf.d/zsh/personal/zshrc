@@ -48,6 +48,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 alias zed="{{vars.zed}}"
 
 # Mise
+export PATH="$HOME/.local/bin:$PATH"
 eval "$(mise activate zsh)"
 
 # jj
