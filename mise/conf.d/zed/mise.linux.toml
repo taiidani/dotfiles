@@ -3,3 +3,4 @@
 
 [dotfiles]
 "~/.config/zed/settings.json" = "personal/settings.jsonc"
+"~/.config/zed/AGENTS.md" = "AGENTS.md"
