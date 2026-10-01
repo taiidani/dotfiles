@@ -5,7 +5,6 @@ zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap.packages]
 "brew-cask:discord" = "latest"
-"brew-cask:obsidian" = "latest"
 "brew-cask:signal" = "latest"
 "brew-cask:slack" = "latest"
 "brew-cask:transmit" = "latest"

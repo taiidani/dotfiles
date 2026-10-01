@@ -7,7 +7,7 @@ description: Provides instructions on how to work with Obsidian. Use when the us
 
 This skill provides information about the user's personal preferences when working in Obsidian. Use this skill when the user asks to interact with Obsidian content or tooling.
 
-Before performing any actions with Obsidian, confirm that the https://github.com/kepano/obsidian-skills Skills repository has been installed on the machine. You can confirm this by loading the `/obsidian-cli` skill. If the skill does not exist, halt the operation immediately and perform the installation described in the Skills repository, directing the user through its setup.
+Before performing any actions with Obsidian, confirm that the https://github.com/kepano/obsidian-skills Skills repository has been installed on the machine. You can confirm this by loading the `/obsidian-cli` skill. If the skill does not exist, halt the operation immediately and ask me to install it.
 
 ## Operating Principles
 
@@ -23,7 +23,7 @@ Each vault has specific content in it that needs to be matched to the task being
 
 ### hashicorp (Vault)
 
-This is my work vault and is where most of my Obsidian work happens. For clarify, HashiCorp is a company I worked at that was acquired by IBM June, 2026, and while I still refer to my workplace as HashiCorp the names of the two companies are roughly equivalent.
+This is my work vault and is where most of my Obsidian work happens. For clarity, HashiCorp is a company I worked at that was acquired by IBM June, 2026, and while I still refer to my workplace as HashiCorp the names of the two companies are roughly equivalent.
 
 Some information about this vault:
 

@@ -1,0 +1,8 @@
+[bootstrap.repos]
+"./obsidian-skills" = { url = "https://github.com/kepano/obsidian-skills.git", ref = "main" }
+
+[dotfiles]
+"~/.agents/skills/obsidian" = "obsidian"
+"~/.agents/skills/obsidian-bases" = "obsidian-skills/skills/obsidian-bases"
+"~/.agents/skills/obsidian-cli" = "obsidian-skills/skills/obsidian-cli"
+"~/.agents/skills/obsidian-markdown" = "obsidian-skills/skills/obsidian-markdown"
