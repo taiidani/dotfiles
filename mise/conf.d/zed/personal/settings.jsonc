@@ -1,0 +1,208 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "diff_view_style": "split",
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "buffer_font_family": "Monaspace Neon NF",
+  "terminal": {
+    "font_family": "Monaspace Neon NF",
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+    "github-copilot": {
+      "type": "registry",
+    },
+  },
+  "agent": {
+    "play_sound_when_agent_done": "when_hidden",
+    "sandbox_permissions": {
+      "allow_unsandboxed": true,
+      "allow_all_hosts": true
+    },
+    "tool_permissions": {
+      "tools": {
+        "copy_path": {
+          "default": "allow"
+        },
+        "create_directory": {
+          "default": "allow"
+        },
+        "terminal": {
+          "default": "allow",
+          "always_allow": [
+            {
+              "pattern": "^cd\\s+internal(\\s|$)"
+            },
+            {
+              "pattern": "^go\\s+build(\\s|$)"
+            },
+            {
+              "pattern": "^go\\s+test(\\s|$)"
+            },
+            {
+              "pattern": "^git\\b"
+            },
+            {
+              "pattern": "^echo\\b"
+            },
+            {
+              "pattern": "^sed\\b"
+            },
+            {
+              "pattern": "^grep\\b"
+            },
+            {
+              "pattern": "^go\\s+vet(\\s|$)"
+            },
+            {
+              "pattern": "^go\\s+run(\\s|$)"
+            },
+            {
+              "pattern": "^echo\\s+===(\\s|$)"
+            },
+            {
+              "pattern": "^wc\\b"
+            },
+            {
+              "pattern": "^tail\\b"
+            }
+          ]
+        },
+        "skill": {
+          "default": "allow"
+        },
+        "fetch": {
+          "default": "allow"
+        }
+      }
+    },
+    "default_profile": "write",
+    "dock": "right",
+    "default_model": {
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-5",
+    },
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.6",
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.4",
+        "enable_thinking": false,
+        "effort": "high"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.8",
+        "enable_thinking": true,
+        "effort": "high"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-5",
+        "enable_thinking": true,
+        "effort": "medium"
+      },
+      {
+        "provider": "openrouter",
+        "model": "~anthropic/claude-sonnet-latest",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "~anthropic/claude-opus-latest",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "moonshotai/kimi-k3",
+        "enable_thinking": true
+      }
+    ],
+    "model_parameters": [],
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "languages": {
+    "YAML": {
+      "tab_size": 2,
+    },
+  },
+  "ssh_connections": [
+    {
+      "host": "192.168.102.80",
+      "username": "rnixon",
+      "args": [
+        "-A"
+      ],
+      "projects": [
+        {
+          "paths": [
+            "/data"
+          ]
+        }
+      ],
+      "nickname": "web"
+    },
+    {
+      "host": "monitoring",
+      "username": "rnixon",
+      "args": [
+        "-A"
+      ],
+      "projects": []
+    },
+    {
+      "host": "192.168.102.69",
+      "args": [
+        "-A"
+      ],
+      "projects": [
+        {
+          "paths": [
+            "/home/rnixon/servarr"
+          ]
+        }
+      ]
+    }
+  ],
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+}

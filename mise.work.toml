@@ -5,7 +5,6 @@ zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap.packages]
 "brew-cask:lm-studio" = "latest"
-"brew-cask:zed" = "latest"
 
 [bootstrap.macos.finder]
 show_pathbar = true

@@ -9,7 +9,6 @@ zsh_addons_path = "/opt/homebrew/share"
 "brew-cask:signal" = "latest"
 "brew-cask:slack" = "latest"
 "brew-cask:transmit" = "latest"
-"brew-cask:zed" = "latest"
 
 [bootstrap.macos.finder]
 show_pathbar = true

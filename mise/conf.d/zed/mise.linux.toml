@@ -1,0 +1,5 @@
+[bootstrap.packages]
+"pacman:zed" = "latest"
+
+[dotfiles]
+"~/.config/zed/settings.json" = "personal/settings.jsonc"
