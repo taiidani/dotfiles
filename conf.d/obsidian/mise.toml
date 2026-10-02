@@ -1,5 +1,5 @@
 [bootstrap.repos]
-"~/.config/mise/bootstrap-repo/mise/conf.d/obsidian/obsidian-skills" = { url = "https://github.com/kepano/obsidian-skills.git", ref = "main" }
+"~/.config/mise/conf.d/obsidian/obsidian-skills" = { url = "https://github.com/kepano/obsidian-skills.git", ref = "main" }
 
 [dotfiles]
 "~/.agents/skills/obsidian" = "obsidian"
