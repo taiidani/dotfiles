@@ -1,2 +1,5 @@
 [bootstrap.packages]
 "brew-cask:1password" = "latest"
+
+[tools]
+1password = "latest"

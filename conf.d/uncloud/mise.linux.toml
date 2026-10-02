@@ -1,2 +1,5 @@
 [dotfiles]
 "~/.config/uncloud/config.yaml" = "config.yaml"
+
+[tools]
+"github:psviderski/uncloud" = "latest"
