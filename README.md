@@ -9,6 +9,7 @@ The only prerequisite is [mise](https://mise.jdx.dev/).
 ```sh
 curl https://mise.run | sh
 export PATH="$HOME/.local/bin:$PATH"
+```
 
 ### Local Machine
 
