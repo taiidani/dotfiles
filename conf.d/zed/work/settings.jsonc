@@ -1,0 +1,175 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato",
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Catppuccin Macchiato",
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_size": 15,
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "dockerfile": true,
+    "html": true,
+    "proto": true,
+    "sql": true,
+    "terraform": true,
+    "toml": true,
+  },
+  "diff_view_style": "split",
+  "cli_default_open_behavior": "existing_window",
+  "title_bar": {
+    "show_branch_status_icon": true,
+  },
+  "tabs": {
+    "git_status": true,
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "languages": {
+    "Markdown": {
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": true,
+      },
+    },
+  },
+  "ssh_connections": [
+    {
+      "host": "rnixon02",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/ubuntu"],
+        },
+      ],
+    },
+    {
+      "host": "prdeci02",
+      "args": [],
+      "projects": [],
+    },
+  ],
+  "agent": {
+    "threads_sidebar": {
+      "position": "left"
+    },
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-opus-5.5",
+      "enable_thinking": true,
+      "effort": "medium",
+    },
+    "sandbox_permissions": {
+      "write_paths": [
+        {
+          "requested": "/Users/rnixon/Library/Caches/go-build",
+          "resolved": "/Users/rnixon/Library/Caches/go-build",
+        },
+        "/tmp",
+        {
+          "requested": "/Users/rnixon/.cache/gh",
+          "resolved": "/Users/rnixon/.cache/gh",
+        },
+      ],
+      "network_hosts": [
+        "fnox.jdx.dev",
+        "cloud.ibm.com",
+        "cv.hashicorp.services",
+        "hashicorp.okta.com",
+        "opentelemetry.io",
+        "ibm.sharepoint.com",
+        "ibm.ent.box.com",
+        "ibm.account.box.com",
+        "pypi.org",
+        "*.pypi.org",
+        "*.pythonhosted.org",
+        "zensical.org",
+        "github.com",
+        "*.blob.core.windows.net",
+        "*.github.com",
+        "*.githubusercontent.com",
+        "proxy.golang.org",
+        "sum.golang.org",
+        "storage.googleapis.com",
+      ],
+    },
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.6",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-5",
+        "enable_thinking": true,
+        "effort": "high",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-5.5",
+        "enable_thinking": true,
+        "effort": "medium",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-5.5",
+        "enable_thinking": true,
+        "effort": "high",
+      },
+    ],
+    "default_profile": "write",
+    "model_parameters": [],
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+    "mode": "eager",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+    "button": false,
+  },
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "format_on_save": "on",
+  "wrap_guides": [80, 120],
+  "lsp": {
+    "gopls": {},
+  },
+  "agent_servers": {
+    "bob": {
+      "type": "custom",
+      "command": "mise",
+      "args": ["exec", "node@26.4.0", "--", "bob", "acp", "--trust"],
+    },
+    "opencode": {
+      "type": "registry",
+    },
+  },
+}

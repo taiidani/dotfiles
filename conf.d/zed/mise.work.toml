@@ -1,2 +1,5 @@
 [bootstrap.packages]
 "brew-cask:zed" = "latest"
+
+[dotfiles]
+"~/.config/zed/settings.json" = "work/settings.jsonc"
