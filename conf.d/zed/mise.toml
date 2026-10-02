@@ -1,2 +1,3 @@
 [dotfiles]
 "~/.config/zed/AGENTS.md" = "AGENTS.md"
+"~/.config/zed/snippets" = "snippets"
