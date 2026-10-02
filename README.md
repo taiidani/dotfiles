@@ -6,12 +6,17 @@ This repository tracks the dotfiles on my personal development machines.
 
 The only prerequisite is [mise](https://mise.jdx.dev/).
 
+```sh
+curl https://mise.run | sh
+export PATH="$HOME/.local/bin:$PATH"
+
 ### Local Machine
 
-Apply based on the environment (work or home) that you're configuring.
+Apply based on the environment (work, home, linux, etc.) that you're configuring.
 
 ```sh
-mise -E work bootstrap --from git@github.com:taiidani/dotfiles.git
+mise -E linux bootstrap --adopt https://github.com/taiidani/dotfiles.git
+echo 'env = ["linux", "personal"]' >> ~/.config/mise/miserc.local.toml
 ```
 
 ### Remote Machine
