@@ -73,13 +73,12 @@
   ],
   "agent": {
     "threads_sidebar": {
-      "position": "left"
+      "position": "left",
     },
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-opus-5.5",
+      "model": "claude-haiku-4.5",
       "enable_thinking": true,
-      "effort": "medium",
     },
     "sandbox_permissions": {
       "write_paths": [
@@ -122,27 +121,21 @@
     "favorite_models": [
       {
         "provider": "copilot_chat",
-        "model": "claude-opus-4.6",
-        "enable_thinking": false,
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "claude-sonnet-5",
-        "enable_thinking": true,
-        "effort": "high",
-      },
-      {
-        "provider": "copilot_chat",
         "model": "claude-opus-5.5",
         "enable_thinking": true,
-        "effort": "medium",
+        "effort": "medium"
       },
       {
         "provider": "copilot_chat",
         "model": "claude-sonnet-5.5",
         "enable_thinking": true,
-        "effort": "high",
+        "effort": "high"
       },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-haiku-4.5",
+        "enable_thinking": true
+      }
     ],
     "default_profile": "write",
     "model_parameters": [],
