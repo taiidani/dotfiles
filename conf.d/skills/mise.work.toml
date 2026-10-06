@@ -1,4 +1,8 @@
+# [bootstrap.repos]
+# "~/hashicorp/production-safety-meta" = { url = "https://github.com/hashicorp/production-safety-meta.git" }
+
 [dotfiles]
+"~/.agents/skills/capabilities-breakdown" = "~/hashicorp/production-safety-meta/skills/capabilities-breakdown"
 "~/.agents/skills/coder" = "coder"
 "~/.agents/skills/jira" = "jira"
 "~/.agents/skills/mail" = "mail"
