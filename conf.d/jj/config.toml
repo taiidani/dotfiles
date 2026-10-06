@@ -6,6 +6,7 @@ email = "{{vars.email}}"
 
 [ui]
 editor = "{{vars.zed}} --wait"
+default-command = "log"
 
 [signing]
 behavior = "own"
