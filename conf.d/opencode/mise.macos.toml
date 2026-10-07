@@ -1,2 +1,3 @@
 [bootstrap.packages]
 "brew-cask:opencode-desktop" = "latest"
+"brew:anomalyco/tap/opencode-v2" = "latest"
