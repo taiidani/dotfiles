@@ -7,3 +7,8 @@ fnox = "latest"
 github-cli = "latest"
 jq = "latest"
 terraform = "1"
+
+[bootstrap.mise_shell_activate]
+# zsh activation is happening in conf.d/zsh
+bash_profile = "shims"
+bashrc = "activate"
