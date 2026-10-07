@@ -3,6 +3,7 @@
 "brew:docker-buildx" = "latest"
 "brew:docker-completion" = "latest"
 "brew:docker-compose" = "latest"
+"brew:hashicorp/internal/docker-credential-doormat" = "latest"
 
 [dotfiles]
 "~/.docker/config.json" = "work/config.json"

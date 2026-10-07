@@ -34,7 +34,12 @@ ollama = "latest"
 "go:github.com/hashicorp/tfctl-cli/cmd/tfctl" = "main"
 fnox = "latest"
 
+[bootstrap.brew.taps]
+"hashicorp/internal" = "https://github.com/hashicorp/homebrew-internal.git"
+"hashicorp/security" = "https://github.com/hashicorp/homebrew-security.git"
+
 [bootstrap.packages]
+"brew:hashicorp/security/doormat-cli" = "latest"
 "brew-cask:lm-studio" = "latest"
 "brew-cask:tablecruncher" = "latest"
 "brew:poppler" = "latest"
