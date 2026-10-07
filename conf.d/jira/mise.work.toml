@@ -1,0 +1,8 @@
+[bootstrap.brew.taps]
+"atlassian/acli" = "https://github.com/atlassian/homebrew-acli.git"
+
+[bootstrap.packages]
+"brew:atlassian/acli/acli" = "latest"
+
+[dotfiles]
+"~/.agents/skills/jira" = "skill"

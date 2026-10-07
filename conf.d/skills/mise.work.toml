@@ -4,6 +4,5 @@
 [dotfiles]
 "~/.agents/skills/capabilities-breakdown" = "~/hashicorp/production-safety-meta/skills/capabilities-breakdown"
 "~/.agents/skills/coder" = "coder"
-"~/.agents/skills/jira" = "jira"
 "~/.agents/skills/mail" = "mail"
 "~/.agents/skills/slack" = "slack"
