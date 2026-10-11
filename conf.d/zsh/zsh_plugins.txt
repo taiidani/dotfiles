@@ -1,0 +1,15 @@
+# zshrc.d plugins
+mattmc3/zshrc.d
+
+# Zephyr plugins
+# This needs to load after zshrc.d so that the rc files can set zstyle customizations
+using:mattmc3/zephyr path:plugins
+autosuggest
+color
+completion
+compstyle
+directory
+history
+history-search
+# editor
+# prompt

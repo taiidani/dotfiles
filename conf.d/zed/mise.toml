@@ -1,3 +1,6 @@
 [dotfiles]
 "~/.config/zed/AGENTS.md" = "AGENTS.md"
 "~/.config/zed/snippets" = "snippets"
+
+# CachyOS Zed is installed under "zeditor". Ensure it's always aliased to "zed"
+"~/.zshrc.d/99-zed.zsh" = { content = "alias zed='{{vars.zed}}'", permissions = "0644" }

@@ -1,5 +1,6 @@
 [dotfiles]
 "~/.config/jj/config.toml" = { source = "config.toml", mode = "template" }
+"~/.zshrc.d/99-jj.zsh" = "99-jj.zsh"
 
 [tools]
 jj = "latest"

@@ -20,7 +20,6 @@ zsh_addons_path = "/opt/homebrew/share"
 awscli = "latest"
 bun = "latest"
 envsubst = "latest"
-github-cli = "latest"
 jq = "latest"
 node = "25.6.1"
 terraform = "1.14.3"
@@ -32,7 +31,6 @@ colima = "latest"
 ollama = "latest"
 "github:hashicorp/tfcdev" = "latest"
 "go:github.com/hashicorp/tfctl-cli/cmd/tfctl" = "main"
-fnox = "latest"
 
 [bootstrap.brew.taps]
 "hashicorp/internal" = "https://github.com/hashicorp/homebrew-internal.git"
@@ -40,7 +38,6 @@ fnox = "latest"
 
 [bootstrap.packages]
 "brew:hashicorp/security/doormat-cli" = "latest"
-"brew-cask:lm-studio" = "latest"
 "brew-cask:tablecruncher" = "latest"
 "brew:poppler" = "latest"
 

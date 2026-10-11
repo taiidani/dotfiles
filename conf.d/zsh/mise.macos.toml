@@ -1,0 +1,11 @@
+[bootstrap.packages]
+"brew:antidote" = "latest"
+"brew:zsh-autosuggestions" = { version = "latest", state = "absent" }
+"brew:zsh-history-substring-search" = { version = "latest", state = "absent" }
+"brew:zsh-syntax-highlighting" = { version = "latest", state = "absent" }
+
+[dotfiles]
+"~/.zshrc" = { content = '''
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
+''', permissions = "0644" }

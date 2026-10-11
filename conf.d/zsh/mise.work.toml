@@ -1,7 +1,0 @@
-[bootstrap.packages]
-"brew:zsh-autosuggestions" = "latest"
-"brew:zsh-history-substring-search" = "latest"
-"brew:zsh-syntax-highlighting" = "latest"
-
-[dotfiles]
-"~/.zshrc" = { source = "work/zshrc", mode = "template" }
