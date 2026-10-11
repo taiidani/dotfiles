@@ -1,6 +1,5 @@
 [settings]
 experimental = true
-env_shell_expand = true
 idiomatic_version_file_enable_tools = ["ruby"]
 
 [settings.npm]
@@ -12,17 +11,13 @@ bun = true
 [vars]
 email = "ryan.nixon@ibm.com"
 zed = "zed"
-zsh_addons_path = "/opt/homebrew/share"
 
 [tools]
 "aqua:go-task/task" = "latest"
 "npm:agent-browser" = "latest"
-awscli = "latest"
 bun = "latest"
 envsubst = "latest"
-jq = "latest"
 node = "25.6.1"
-terraform = "1.14.3"
 vault = "latest"
 "github:hashicorp/roam" = "latest"
 lima = "latest"
@@ -40,12 +35,3 @@ ollama = "latest"
 "brew:hashicorp/security/doormat-cli" = "latest"
 "brew-cask:tablecruncher" = "latest"
 "brew:poppler" = "latest"
-
-[bootstrap.macos.finder]
-show_pathbar = true
-
-[bootstrap.macos.trackpad]
-tap_to_click = true
-
-[bootstrap.macos.defaults]
-"com.apple.finder" = { AppleShowAllFiles = true }

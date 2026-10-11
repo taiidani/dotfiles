@@ -1,14 +1,7 @@
-[settings]
-env_shell_expand = true
-
 [env]
 EDITOR = "nano"
 SSH_AUTH_SOCK = "$HOME/.1password/agent.sock"
 
 [tools]
-"aqua:github/copilot-cli" = "latest"
-awscli = "latest"
-jq = "latest"
 node = "25.6.1"
-terraform = "1.15.8"
 "github:adileo/squirreldisk" = "latest"

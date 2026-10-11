@@ -1,0 +1,8 @@
+[bootstrap.macos.finder]
+show_pathbar = true
+
+[bootstrap.macos.trackpad]
+tap_to_click = true
+
+[bootstrap.macos.defaults]
+"com.apple.finder" = { AppleShowAllFiles = true }

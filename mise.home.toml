@@ -1,19 +1,9 @@
 [vars]
 email = "r.taiidani@gmail.com"
 zed = "zed"
-zsh_addons_path = "/opt/homebrew/share"
 
 [bootstrap.packages]
 "brew-cask:discord" = "latest"
 "brew-cask:signal" = "latest"
 "brew-cask:slack" = "latest"
 "brew-cask:transmit" = "latest"
-
-[bootstrap.macos.finder]
-show_pathbar = true
-
-[bootstrap.macos.trackpad]
-tap_to_click = true
-
-[bootstrap.macos.defaults]
-"com.apple.finder" = { AppleShowAllFiles = true }
