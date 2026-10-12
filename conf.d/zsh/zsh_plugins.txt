@@ -1,3 +1,6 @@
+# Start completion first so that other plugins can use it
+mattmc3/zephyr path:plugins/completion
+
 # zshrc.d plugins
 mattmc3/zshrc.d
 
@@ -6,7 +9,6 @@ mattmc3/zshrc.d
 using:mattmc3/zephyr path:plugins
 autosuggest
 color
-completion
 compstyle
 directory
 history
