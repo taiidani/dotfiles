@@ -76,21 +76,30 @@
       "position": "left",
     },
     "default_model": {
+      "effort": "high",
       "provider": "copilot_chat",
-      "model": "claude-haiku-4.5",
+      "model": "claude-sonnet-5.5",
       "enable_thinking": true,
     },
     "sandbox_permissions": {
       "write_paths": [
         {
           "requested": "/Users/rnixon/Library/Caches/go-build",
-          "resolved": "/Users/rnixon/Library/Caches/go-build",
+          "resolved": "/Users/rnixon/Library/Caches/go-build"
         },
         "/tmp",
         {
           "requested": "/Users/rnixon/.cache/gh",
-          "resolved": "/Users/rnixon/.cache/gh",
+          "resolved": "/Users/rnixon/.cache/gh"
         },
+        {
+          "requested": "/Users/rnixon/Library/Caches/golangci-lint",
+          "resolved": "/Users/rnixon/Library/Caches/golangci-lint"
+        },
+        {
+          "requested": "/Users/rnixon/Library/Caches/mise",
+          "resolved": "/Users/rnixon/Library/Caches/mise"
+        }
       ],
       "network_hosts": [
         "fnox.jdx.dev",
