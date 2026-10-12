@@ -1,3 +1,5 @@
 [bootstrap.packages]
 "brew-cask:lm-studio" = "latest"
+
+[dotfiles]
 "~/.zshrc.d/99-lm-studio.zsh" = "99-lm-studio.zsh"
