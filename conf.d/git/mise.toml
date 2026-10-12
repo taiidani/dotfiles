@@ -1,3 +1,8 @@
 [dotfiles]
+"~/.agents/skills/gh-cli" = "gh-cli"
 "~/.config/git/excludes" = "excludes"
 "~/.gitconfig" = { source = "gitconfig", mode = "template" }
+"~/.zshrc.d/99-github.zsh" = "99-github.zsh"
+
+[tools]
+github-cli = "latest"

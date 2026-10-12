@@ -1,4 +1,3 @@
 [dotfiles]
-"~/.agents/skills/gh-cli" = "gh-cli"
 "~/.agents/skills/mise" = "mise"
 "~/.agents/skills/review" = "review"

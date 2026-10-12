@@ -4,7 +4,6 @@ env_shell_expand = true
 [tools]
 awscli = "latest"
 fnox = "latest"
-github-cli = "latest"
 jq = "latest"
 terraform = "1"
 
