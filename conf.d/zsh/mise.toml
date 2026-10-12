@@ -1,7 +1,7 @@
 [dotfiles]
 "~/.zsh_plugins.txt" = "zsh_plugins.txt"
+"~/.zshenv" = "zshenv"
 "~/.zshrc.d/00-mise.zsh" = "zshrc.d/00-mise.zsh"
 "~/.zshrc.d/90-aliases.zsh" = "zshrc.d/90-aliases.zsh"
-"~/.zshrc.d/99-history.zsh" = "zshrc.d/99-history.zsh"
 "~/.zshrc.d/99-github.zsh" = "zshrc.d/99-github.zsh"
 "~/.zshrc.d/99-prompt.zsh" = "zshrc.d/99-prompt.zsh"

@@ -1,3 +1,2 @@
-# HISTSIZE=100000
-# SAVEHIST=100000
+# Ensure there is a consistent history file
 zstyle ':zephyr:plugin:history' 'histfile' '~/.zsh_history'
