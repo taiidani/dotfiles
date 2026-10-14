@@ -1,13 +1,14 @@
 ---
 name: review
-description: Pre-push code review of the local commit stack. Walks Jujutsu (jj) revisions commit-by-commit — falling back to git — runs the project's lint and test tasks, and returns a numbered, severity-tiered report with clickable file:line references. Strictly read-only and never pushes.
+description: Code review of the local checked out commits. Walks Jujutsu (jj) revisions commit-by-commit — falling back to git — runs the project's lint and test tasks, and returns a numbered, severity-tiered report with clickable file:line references. Strictly read-only and never pushes.
 disable-model-invocation: true
 ---
 
 # Pre-Push Code Review
 
-Use this skill when the user runs `/review`. It reviews the local commits that have not yet been
-pushed, so the user can decide whether to run `jj git push` themselves.
+Use this skill when the user runs `/review`.
+It reviews the commits currently checked out (between `main` and current commit) so the user can determine if the code is of high quality.
+Reviews may be on code that is yet to be pushed, or on code from a different author that the user is reviewing before approving.
 
 ## Non-Negotiable Rules
 
@@ -57,12 +58,12 @@ Everything below applies to both modes; jj commands are shown because jj is the 
 Run these before reading any diff. Report the results, then continue the review regardless of what
 they find.
 
-| Check | Revset | Severity |
-|---|---|---|
-| Conflicted revisions | `trunk()..@ & conflicts()` | 🔴 Blocker |
-| Crosses the immutable boundary | `trunk()..@ & immutable()` | 🔴 Blocker |
+| Check                           | Revset                               | Severity   |
+| ------------------------------- | ------------------------------------ | ---------- |
+| Conflicted revisions            | `trunk()..@ & conflicts()`           | 🔴 Blocker |
+| Crosses the immutable boundary  | `trunk()..@ & immutable()`           | 🔴 Blocker |
 | Empty / placeholder description | `trunk()..@ & description(exact:"")` | 🟠 Warning |
-| Empty commit | `trunk()..@ & empty()` | 🟠 Warning |
+| Empty commit                    | `trunk()..@ & empty()`               | 🟠 Warning |
 
 Note: the working copy `@` is legitimately empty and undescribed most of the time. Only warn about
 `@` if it contains changes the user may not have meant to include. Also flag descriptions that are
@@ -163,11 +164,11 @@ Use this structure:
 ```markdown
 ## Review — 3 commits, `trunk()..@`
 
-| # | Severity | Finding | Location |
-|---|---|---|---|
-| 1 | 🔴 Blocker | Hardcoded API token | `internal/api/client.go:31` |
-| 2 | 🟠 Should-fix | Missing error check on `Close()` | `cmd/serve/main.go:88` |
-| 3 | 🔵 Nit | Redundant comment | `internal/api/client.go:12` |
+| #   | Severity      | Finding                          | Location                    |
+| --- | ------------- | -------------------------------- | --------------------------- |
+| 1   | 🔴 Blocker    | Hardcoded API token              | `internal/api/client.go:31` |
+| 2   | 🟠 Should-fix | Missing error check on `Close()` | `cmd/serve/main.go:88`      |
+| 3   | 🔵 Nit        | Redundant comment                | `internal/api/client.go:12` |
 
 **Pre-flight:** 1 conflicted revision · descriptions OK
 **Checks:** `lint` ✅ · `test` ❌ (2 failures)
@@ -177,6 +178,7 @@ Use this structure:
 ### `mtktorto` — first commit
 
 #### 1. 🔴 Hardcoded API token
+
 `internal/api/client.go:31`
 
 The token is committed in plaintext and will be in the pushed history permanently.
@@ -185,6 +187,7 @@ Suggested direction: read it from the environment at construction time. If this 
 rotate it — removing it from the file does not remove it from the commit.
 
 #### 3. 🔵 Redundant comment
+
 `internal/api/client.go:12`
 
 The comment restates the function signature.
