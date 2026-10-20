@@ -2,7 +2,16 @@
 # "~/hashicorp/taiidani-spike" = { url = "https://github.com/hashicorp/taiidani-spike.git" }
 
 [dotfiles]
+"~/.agents/skills/api-surface" = "~/hashicorp/taiidani-spike/skills/api-surface"
+"~/.agents/skills/aws-costs" = "~/hashicorp/taiidani-spike/skills/aws-costs"
 "~/.agents/skills/capabilities-breakdown" = "~/hashicorp/taiidani-spike/skills/capabilities-breakdown"
+"~/.agents/skills/coverage-analysis" = "~/hashicorp/taiidani-spike/skills/coverage-analysis"
+"~/.agents/skills/delivery-metrics" = "~/hashicorp/taiidani-spike/skills/delivery-metrics"
+"~/.agents/skills/hcp-costs" = "~/hashicorp/taiidani-spike/skills/hcp-costs"
+"~/.agents/skills/incident-search" = "~/hashicorp/taiidani-spike/skills/incident-search"
+"~/.agents/skills/jira-work-history" = "~/hashicorp/taiidani-spike/skills/jira-work-history"
+"~/.agents/skills/runner-costs" = "~/hashicorp/taiidani-spike/skills/runner-costs"
+"~/.agents/skills/secvuln-search" = "~/hashicorp/taiidani-spike/skills/secvuln-search"
 "~/.agents/skills/coder" = "coder"
 "~/.agents/skills/mail" = "mail"
 "~/.agents/skills/slack" = "slack"
