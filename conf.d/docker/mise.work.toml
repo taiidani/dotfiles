@@ -1,7 +1,6 @@
 [bootstrap.packages]
 "brew:docker" = "latest"
 "brew:docker-buildx" = "latest"
-"brew:docker-completion" = "latest"
 "brew:docker-compose" = "latest"
 
 [dotfiles]
