@@ -28,7 +28,6 @@ ollama = "latest"
 vault = "latest"
 
 [bootstrap.brew.taps]
-"hashicorp/internal" = "https://github.com/hashicorp/homebrew-internal.git"
 "hashicorp/security" = "https://github.com/hashicorp/homebrew-security.git"
 
 [bootstrap.packages]
