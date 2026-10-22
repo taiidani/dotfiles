@@ -1,5 +1,5 @@
 # keybind = global:cmd+space=toggle_quick_terminal
-# keybind = global:option+space=toggle_quick_terminal
+keybind = global:option+space=toggle_quick_terminal
 # keybind = global:super+space=toggle_quick_terminal
 
 quick-terminal-screen = mouse
