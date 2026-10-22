@@ -167,7 +167,7 @@
     "bob": {
       "type": "custom",
       "command": "mise",
-      "args": ["exec", "node@26.4.0", "--", "bob", "acp", "--trust"],
+      "args": ["exec", "--", "bob", "acp", "--trust"],
     },
     "opencode": {
       "type": "registry",
