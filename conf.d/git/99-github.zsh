@@ -1,1 +1,1 @@
-export GITHUB_TOKEN="$(mise exec -- gh auth token)"
+# export GITHUB_TOKEN="$(mise exec -- gh auth token)"
