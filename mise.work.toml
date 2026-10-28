@@ -35,3 +35,7 @@ vault = "latest"
 "brew:hashicorp/security/doormat-cli" = "latest"
 "brew-cask:tablecruncher" = "latest"
 "brew:poppler" = "latest"
+
+[bootstrap.repos]
+"~/hashicorp/core-sre-continuous-verification" = { url = "https://github.com/hashicorp/core-sre-continuous-verification.git" }
+"~/hashicorp/taiidani-spike" = { url = "https://github.com/hashicorp/taiidani-spike.git" }

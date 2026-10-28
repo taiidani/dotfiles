@@ -2,6 +2,7 @@
 
 - Default version control is `jj` (Jujutsu). Fall back to `git` if the repo does not have a `.jj` directory.
 - Never run `jj describe`, `jj new`, `jj commit`, `jj git push` or `git commit`/`git push` without asking.
+- Always include `--no-pager` in `jj` commands to avoid blocking on interactive prompts.
 
 # Tooling
 
