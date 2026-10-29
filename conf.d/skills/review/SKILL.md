@@ -1,13 +1,14 @@
 ---
 name: review
-description: Code review of the local checked out commits. Walks Jujutsu (jj) revisions commit-by-commit — falling back to git — runs the project's lint and test tasks, and returns a numbered, severity-tiered report with clickable file:line references. Strictly read-only and never pushes.
+description: Code review of the specified commits. Walks Jujutsu (jj) revisions commit-by-commit, runs the project's lint and test tasks, and returns a numbered, severity-tiered report with clickable file:line references. Strictly read-only and never pushes.
 disable-model-invocation: true
 ---
 
 # Pre-Push Code Review
 
 Use this skill when the user runs `/review`.
-It reviews the commits currently checked out (between `main` and current commit) so the user can determine if the code is of high quality.
+If the user provides a hyperlink to a PR, checkout the PR in an ephemeral `jj` worktree and run the review there.
+Otherwise, it reviews the commits currently checked out (between `main` and current commit) so the user can determine if the code is of high quality.
 Reviews may be on code that is yet to be pushed, or on code from a different author that the user is reviewing before approving.
 
 ## Non-Negotiable Rules
@@ -25,15 +26,13 @@ Reviews may be on code that is yet to be pushed, or on code from a different aut
 4. **The user owns the verdict.** Do not declare the stack "safe to push" or "not safe to push".
    Assign severities, summarize, and stop. The push decision is theirs.
 
-## Step 1 — Detect VCS and Determine Scope
+## Step 1 — Determine Scope
 
-Run `jj root`. If it succeeds, use **jj mode**. If it fails, use **git mode**.
+Run `jj root`. If it fails, stop and request the user set up the repository for `jj` use.
 
-### jj mode
-
-Default revset: `trunk()..@`. This works even when no bookmark exists yet, which is the common
-case before a first push. If the user supplied an explicit revset (e.g. `/review -r 'abc..def'`),
-use theirs instead.
+Default revset: `trunk()..@`.
+This works even when no bookmark exists yet, which is the common case before a first push.
+If the user supplied an explicit revset (e.g. `/review -r 'abc..def'`), use theirs instead.
 
 List the commits oldest-first — review order matters:
 
@@ -43,15 +42,6 @@ jj --no-pager log -r 'trunk()..@' --no-graph --reversed \
 ```
 
 If the range is empty, say there is nothing to review and stop.
-
-### git mode
-
-Resolve the upstream with `git --no-optional-locks rev-parse --abbrev-ref --symbolic-full-name '@{u}'`.
-If there is no upstream, fall back to `origin/main`, then `origin/master`. Then list commits with
-`git --no-pager log --reverse --format='%h%x09%s' <upstream>..HEAD` and read each with
-`git --no-pager show <sha>`.
-
-Everything below applies to both modes; jj commands are shown because jj is the assumed default.
 
 ## Step 2 — Pre-Flight Checks
 
