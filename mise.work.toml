@@ -32,10 +32,11 @@ vault = "latest"
 "hashicorp/security" = "https://github.com/hashicorp/homebrew-security.git"
 
 [bootstrap.packages]
-"brew:hashicorp/security/doormat-cli" = "latest"
+"brew-cask:fluidvoice" = "latest"
+"brew-cask:openusage" = "latest"
 "brew-cask:tablecruncher" = "latest"
 "brew:poppler" = "latest"
 
-[bootstrap.repos]
-"~/hashicorp/core-sre-continuous-verification" = { url = "https://github.com/hashicorp/core-sre-continuous-verification.git" }
-"~/hashicorp/taiidani-spike" = { url = "https://github.com/hashicorp/taiidani-spike.git" }
+# [bootstrap.repos]
+# "~/hashicorp/core-sre-continuous-verification" = { url = "https://github.com/hashicorp/core-sre-continuous-verification.git", adopt = true }
+# "~/hashicorp/taiidani-spike" = { url = "https://github.com/hashicorp/taiidani-spike.git" }
