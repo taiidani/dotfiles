@@ -14,4 +14,3 @@
 "~/.agents/skills/secvuln-search" = "~/hashicorp/taiidani-spike/skills/secvuln-search"
 "~/.agents/skills/coder" = "coder"
 "~/.agents/skills/mail" = "mail"
-"~/.agents/skills/slack" = "slack"

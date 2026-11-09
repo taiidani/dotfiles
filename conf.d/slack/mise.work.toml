@@ -1,0 +1,8 @@
+[bootstrap.repos]
+"~/.config/mise/conf.d/slack/agent-slack" = { url = "https://github.com/stablyai/agent-slack", ref = "main" }
+
+[dotfiles]
+"~/.agents/skills/agent-slack" = "agent-slack/skills/agent-slack"
+
+[tools]
+"github:stablyai/agent-slack" = "latest"
