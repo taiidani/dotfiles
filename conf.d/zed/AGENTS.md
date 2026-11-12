@@ -1,8 +1,27 @@
 # Version Control
 
-- Default version control is `jj` (Jujutsu). Fall back to `git` if the repo does not have a `.jj` directory.
-- Never run `jj describe`, `jj new`, `jj commit`, `jj git push` or `git commit`/`git push` without asking.
+- Default version control is `jj` (Jujutsu). Fall back to `git` only if the repo does not have a `.jj` directory.
+- Never modify (`jj describe`) or rebase (`jj rebase`) a non-empty commit unless specifically told to. Never push (`jj git push`) unless specifically told to.
 - Always include `--no-pager` in `jj` commands to avoid blocking on interactive prompts.
+
+## Coordination via Workspaces
+
+I like to code alongside you and run my own `jj` commands while you work.
+Use `jj` workspaces (`jj workspace add/list/forget`) to coordinate.
+When I ask you to work on a task that involves code generation, create a new workspace for that task and switch to it.
+When the task is complete, forget and delete the workspace.
+
+The general flow of sessions will be:
+
+1. I prompt you with a task, and you determine that the task involves code generation.
+2. You create a new workspace for the task and switch to it.
+3. You start a new commit in the workspace, starting from the current state of the default workspace.
+3. You generate code in the workspace. 
+4. I review the code and provide feedback. I may modify the code, squash commits, or rebase the workspace before asking you to continue.
+5. You continue generating code in the workspace until I declare the task is complete.
+6. You forget and delete the workspace.
+
+You may create multiple commits as you work, but avoid modifying or rebasing non-empty commits unless specifically told to.
 
 # Tooling
 
@@ -15,7 +34,7 @@
 - If I ask you to generate code, avoid making assumptions about the context.
 - Ask clarifying questions when requirements are ambiguous. Otherwise proceed.
 
-# Style
+# Writing Style
 
 - Write for expert engineers with ADHD.
 - Markdown prose is written using Semantic Line Breaks (https://sembr.org/), with one sentence per line. This makes it easier to read diffs and track changes.
