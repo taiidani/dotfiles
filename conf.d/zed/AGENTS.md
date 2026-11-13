@@ -21,7 +21,10 @@ The general flow of sessions will be:
 5. You continue generating code in the workspace until I declare the task is complete.
 6. You forget and delete the workspace.
 
-You may create multiple commits as you work, but avoid modifying or rebasing non-empty commits unless specifically told to.
+The name of the workspace should be hyphenated and descriptive of the ask being made in the session.
+
+When working within a session workspace, you are free to create new described commits as you work.
+You must not modify or rebase existing non-empty commits created outside the session unless specifically told to.
 
 # Tooling
 
